@@ -53,14 +53,7 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--light); }
         ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
-
-        /* Preloader */
-        #preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--white); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 99999; transition: opacity 0.5s ease; }
-        #preloader.fade-out { opacity: 0; pointer-events: none; }
-        .loader { width: 60px; height: 60px; border: 4px solid var(--light-gray); border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        #preloader p { margin-top: 15px; color: var(--primary); font-family: 'Poppins', sans-serif; font-weight: 500; }
-
+    
         /* Container */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
@@ -288,13 +281,6 @@
     </style>
 </head>
 <body>
-
-<!-- PRELOADER -->
-<div id="preloader">
-    <div class="loader"></div>
-    <p>Loading...</p>
-</div>
-<noscript><style>#preloader{display:none !important;}</style></noscript>
 
 <!-- TOP BAR -->
 <div class="top-bar">
