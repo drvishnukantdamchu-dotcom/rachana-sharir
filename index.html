@@ -4,2123 +4,712 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department of Rachana Sharir | Dhanwantari Ayurved Medical College, Udgir</title>
-    <meta name="description" content="Department of Rachana Sharir (Human Anatomy) - BBSPM's Dhanwantari Ayurved Medical College, Udgir. NCISM 2021 Pattern.">
-    <meta name="keywords" content="Rachana Sharir, Human Anatomy, Ayurved, Dhanwantari, Udgir, BAMS, NCISM">
-
-    <!-- Google Fonts -->
+    <meta name="description" content="Department of Rachana Sharir (Human Anatomy) - BBSPM's Dhanwantari Ayurved Medical College & Hospital, Udgir. NCISM 2021 Pattern. Affiliated to MUHS, Nashik.">
+    <meta name="keywords" content="Rachana Sharir, Human Anatomy, Ayurved, Dhanwantari, Udgir, BAMS, NCISM, MUHS, Latur, Ayurveda, Dissection, Museum, Marma, Sharir">
+    <meta name="author" content="Department of Rachana Sharir, DAMC Udgir">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <meta property="og:title" content="Department of Rachana Sharir | DAMC Udgir">
+    <meta property="og:description" content="Department of Rachana Sharir (Human Anatomy) - Dhanwantari Ayurved Medical College, Udgir">
+    <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <style>
-        /* ===== CSS VARIABLES ===== */
-        :root {
-            --primary: #1a5276;
-            --primary-dark: #0e2f44;
-            --primary-light: #2980b9;
-            --secondary: #c0392b;
-            --accent: #e67e22;
-            --gold: #f39c12;
-            --dark: #1a1a2e;
-            --light: #f8f9fa;
-            --gray: #6c757d;
-            --light-gray: #e9ecef;
-            --white: #ffffff;
-            --gradient-primary: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
-            --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            --gradient-accent: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
-            --shadow: 0 10px 30px rgba(0,0,0,0.1);
-            --shadow-hover: 0 20px 40px rgba(0,0,0,0.2);
-            --radius: 16px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* ===== RESET & BASE ===== */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.7;
-            color: var(--dark);
-            background: var(--white);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            line-height: 1.3;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* ===== SCROLLBAR ===== */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--light); }
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 4px;
-        }
-
-        /* ===== PRELOADER ===== */
-        #preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--white);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-            transition: opacity 0.5s ease;
-        }
-
-        #preloader.fade-out {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader {
-            width: 60px;
-            height: 60px;
-            border: 4px solid var(--light-gray);
-            border-top: 4px solid var(--primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* ===== TOP BAR ===== */
-        .top-bar {
-            background: var(--gradient-dark);
-            color: var(--white);
-            padding: 8px 0;
-            font-size: 0.85rem;
-        }
-
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .top-bar a {
-            color: rgba(255,255,255,0.85);
-        }
-
-        .top-bar a:hover {
-            color: var(--gold);
-        }
-
-        .top-bar-left span {
-            margin-right: 20px;
-        }
-
-        .top-bar-left i, .top-bar-right i {
-            margin-right: 5px;
-            color: var(--gold);
-        }
-
-        .social-links-top a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            margin-left: 6px;
-            font-size: 0.8rem;
-            transition: var(--transition);
-        }
-
-        .social-links-top a:hover {
-            background: var(--gold);
-            color: var(--dark);
-            transform: translateY(-2px);
-        }
-
-        /* ===== CONTAINER ===== */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ===== NAVIGATION ===== */
-        .navbar {
-            background: rgba(255,255,255,0.98);
-            backdrop-filter: blur(20px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-            transition: var(--transition);
-        }
-
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .nav-brand img {
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--primary);
-        }
-
-        .nav-brand-text h1 {
-            font-size: 1rem;
-            color: var(--primary);
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-        }
-
-        .nav-brand-text span {
-            font-size: 0.7rem;
-            color: var(--gray);
-            display: block;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 5px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            padding: 8px 14px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--dark);
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            position: relative;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--primary);
-            background: rgba(26, 82, 118, 0.08);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            padding: 5px;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: var(--dark);
-            border-radius: 3px;
-            transition: var(--transition);
-        }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            background: var(--gradient-dark);
-            color: var(--white);
-            padding: 100px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(41, 128, 185, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(230, 126, 34, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(243, 156, 18, 0.2);
-            color: var(--gold);
-            padding: 8px 20px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            border: 1px solid rgba(243, 156, 18, 0.3);
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
-
-        .hero h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 15px;
-        }
-
-        .hero-college-name {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.6);
-            margin-bottom: 30px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .hero-stat {
-            text-align: center;
-        }
-
-        .hero-stat .number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--gold);
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .hero-stat .label {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.7);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .hero-buttons {
-            margin-top: 35px;
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            font-family: 'Poppins', sans-serif;
-            cursor: pointer;
-            border: none;
-            transition: var(--transition);
-        }
-
-        .btn-primary {
-            background: var(--gradient-accent);
-            color: var(--white);
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(230, 126, 34, 0.5);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-
-        .btn-outline:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: var(--white);
-        }
-
-        /* ===== SECTION STYLES ===== */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-alt {
-            background: var(--light);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-            color: var(--primary-dark);
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: var(--gray);
-            font-size: 1.05rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .section-title .divider {
-            width: 60px;
-            height: 4px;
-            background: var(--gradient-accent);
-            margin: 15px auto;
-            border-radius: 2px;
-        }
-
-        /* ===== ABOUT SECTION ===== */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-content p {
-            margin-bottom: 15px;
-            color: #444;
-            font-size: 1.02rem;
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-image img {
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        .about-image .experience-badge {
-            position: absolute;
-            bottom: -20px;
-            right: -20px;
-            background: var(--gradient-accent);
-            color: var(--white);
-            padding: 20px;
-            border-radius: var(--radius);
-            text-align: center;
-            box-shadow: var(--shadow);
-        }
-
-        .experience-badge .num {
-            font-size: 2rem;
-            font-weight: 900;
-            display: block;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .experience-badge .text {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* ===== VISION MISSION ===== */
-        .vm-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .vm-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .vm-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .vm-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--gradient-accent);
-        }
-
-        .vm-card .icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            background: rgba(26, 82, 118, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .vm-card h3 {
-            font-size: 1.4rem;
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-        }
-
-        .vm-card p {
-            color: #555;
-        }
-
-        /* ===== FEATURES / FACILITIES ===== */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .feature-card .icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: rgba(26, 82, 118, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-            color: var(--primary);
-            transition: var(--transition);
-        }
-
-        .feature-card:hover .icon {
-            background: var(--gradient-primary);
-            color: var(--white);
-        }
-
-        .feature-card h3 {
-            font-size: 1.15rem;
-            color: var(--primary-dark);
-            margin-bottom: 10px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .feature-card p {
-            color: #666;
-            font-size: 0.92rem;
-        }
-
-        /* ===== STATS / DEPARTMENT AT A GLANCE ===== */
-        .stats-section {
-            background: var(--gradient-dark);
-            padding: 80px 0;
-            color: var(--white);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .stat-card {
-            text-align: center;
-            padding: 30px 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: var(--radius);
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: var(--transition);
-        }
-
-        .stat-card:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-5px);
-        }
-
-        .stat-card .stat-icon {
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-
-        .stat-card .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--white);
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .stat-card .stat-label {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.7);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 5px;
-        }
-
-        /* ===== ACADEMIC STATS TABLE ===== */
-        .academic-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--white);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .academic-table thead {
-            background: var(--gradient-primary);
-            color: var(--white);
-        }
-
-        .academic-table th, .academic-table td {
-            padding: 15px 20px;
-            text-align: left;
-        }
-
-        .academic-table tbody tr {
-            border-bottom: 1px solid var(--light-gray);
-            transition: var(--transition);
-        }
-
-        .academic-table tbody tr:hover {
-            background: rgba(26, 82, 118, 0.04);
-        }
-
-        .academic-table tbody tr:nth-child(even) {
-            background: var(--light);
-        }
-
-        /* ===== FACULTY SECTION ===== */
-        .faculty-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .faculty-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .faculty-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .faculty-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-        }
-
-        .faculty-info {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .faculty-info h3 {
-            font-size: 1.1rem;
-            color: var(--primary-dark);
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .faculty-info .designation {
-            color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .faculty-info .qualification {
-            color: var(--gray);
-            font-size: 0.85rem;
-            margin-top: 5px;
-        }
-
-        /* ===== ACTIVITIES SECTION ===== */
-        .activities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .activity-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .activity-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .activity-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .activity-card .activity-content {
-            padding: 25px;
-        }
-
-        .activity-card .activity-date {
-            display: inline-block;
-            background: rgba(26, 82, 118, 0.08);
-            color: var(--primary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .activity-card h3 {
-            font-size: 1.15rem;
-            color: var(--primary-dark);
-            margin-bottom: 10px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .activity-card p {
-            color: #666;
-            font-size: 0.92rem;
-        }
-
-        /* ===== GALLERY ===== */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: var(--radius);
-            overflow: hidden;
-            cursor: pointer;
-            aspect-ratio: 4/3;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .gallery-item .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
-            padding: 20px;
-            transform: translateY(100%);
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .overlay {
-            transform: translateY(0);
-        }
-
-        /* ===== DOCUMENTS SECTION ===== */
-        .documents-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .doc-card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            transition: var(--transition);
-        }
-
-        .doc-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .doc-card .doc-icon {
-            width: 55px;
-            height: 55px;
-            border-radius: 12px;
-            background: rgba(192, 57, 43, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--secondary);
-            flex-shrink: 0;
-        }
-
-        .doc-card .doc-info h4 {
-            font-size: 0.95rem;
-            color: var(--primary-dark);
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .doc-card .doc-info p {
-            font-size: 0.82rem;
-            color: var(--gray);
-        }
-
-        .doc-card .download-btn {
-            margin-left: auto;
-            color: var(--primary);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .doc-card .download-btn:hover {
-            color: var(--accent);
-        }
-
-        /* ===== SOFTWARE SECTION ===== */
-        .software-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .software-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .software-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .software-card .sw-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 1.5rem;
-            color: var(--white);
-        }
-
-        .software-card h3 {
-            font-size: 1.05rem;
-            color: var(--primary-dark);
-            font-family: 'Poppins', sans-serif;
-            margin-bottom: 8px;
-        }
-
-        .software-card p {
-            font-size: 0.88rem;
-            color: var(--gray);
-        }
-
-        .software-card .badge-premium {
-            display: inline-block;
-            background: var(--gradient-accent);
-            color: white;
-            padding: 3px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-top: 10px;
-        }
-
-        /* ===== CONTACT SECTION ===== */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .contact-info-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .contact-info-card .ci-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            background: rgba(26, 82, 118, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .contact-info-card h4 {
-            font-size: 1rem;
-            color: var(--primary-dark);
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .contact-info-card p {
-            color: var(--gray);
-            font-size: 0.92rem;
-        }
-
-        .map-container {
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 400px;
-            border: none;
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            background: var(--gradient-dark);
-            color: var(--white);
-            padding: 60px 0 20px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer h4 {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            font-family: 'Poppins', sans-serif;
-            color: var(--gold);
-        }
-
-        .footer p, .footer a {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.9rem;
-        }
-
-        .footer a:hover {
-            color: var(--gold);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links li a::before {
-            content: '›';
-            margin-right: 8px;
-            color: var(--gold);
-        }
-
-        .footer-social a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            margin-right: 10px;
-            margin-top: 10px;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .footer-social a:hover {
-            background: var(--gold);
-            color: var(--dark);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            text-align: center;
-        }
-
-        .footer-bottom p {
-            font-size: 0.85rem;
-        }
-
-        /* ===== VISITOR COUNTER ===== */
-        .visitor-counter {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: var(--radius);
-            margin-top: 20px;
-        }
-
-        .visitor-counter .vc-number {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--gold);
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .visitor-counter .vc-label {
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.6);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* ===== BACK TO TOP ===== */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            color: var(--white);
-            border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow);
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        /* ===== LIGHTBOX ===== */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90vh;
-            border-radius: 8px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            z-index: 10001;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 992px) {
-            .hero h2 { font-size: 2.2rem; }
-            .about-grid, .contact-grid { grid-template-columns: 1fr; }
-            .features-grid { grid-template-columns: repeat(2, 1fr); }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
-            .vm-grid { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 768px) {
-            .top-bar { display: none; }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: var(--shadow);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hero { padding: 60px 0 50px; }
-            .hero h2 { font-size: 1.8rem; }
-            .hero h3 { font-size: 1.1rem; }
-            .hero-stats { gap: 20px; }
-            .hero-stat .number { font-size: 1.8rem; }
-
-            .section { padding: 50px 0; }
-            .section-title h2 { font-size: 1.6rem; }
-
-            .features-grid { grid-template-columns: 1fr; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
-            .activities-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 480px) {
-            .hero h2 { font-size: 1.5rem; }
-            .stats-grid { grid-template-columns: 1fr; }
+        :root{--primary:#1a5276;--primary-dark:#0e2f44;--primary-light:#2980b9;--secondary:#c0392b;--accent:#e67e22;--gold:#f39c12;--dark:#1a1a2e;--light:#f8f9fa;--gray:#6c757d;--light-gray:#e9ecef;--white:#fff;--green:#27ae60;--gradient-primary:linear-gradient(135deg,#1a5276 0%,#2980b9 100%);--gradient-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);--gradient-accent:linear-gradient(135deg,#e67e22 0%,#f39c12 100%);--shadow:0 10px 30px rgba(0,0,0,0.1);--shadow-hover:0 20px 40px rgba(0,0,0,0.2);--radius:16px;--transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;scroll-padding-top:80px}
+        body{font-family:'Open Sans',sans-serif;line-height:1.7;color:var(--dark);background:var(--white);overflow-x:hidden}
+        h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.3}
+        a{text-decoration:none;color:inherit;transition:var(--transition)}
+        img{max-width:100%;height:auto}
+        ::-webkit-scrollbar{width:8px}
+        ::-webkit-scrollbar-track{background:var(--light)}
+        ::-webkit-scrollbar-thumb{background:var(--primary);border-radius:4px}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+        /* Top Bar */
+        .top-bar{background:var(--gradient-dark);color:var(--white);padding:8px 0;font-size:.85rem}
+        .top-bar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+        .top-bar a{color:rgba(255,255,255,.85)}
+        .top-bar a:hover{color:var(--gold)}
+        .top-bar-left span{margin-right:20px}
+        .top-bar-left i,.top-bar-right i{margin-right:5px;color:var(--gold)}
+        .social-links-top a{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);margin-left:6px;font-size:.8rem;transition:var(--transition)}
+        .social-links-top a:hover{background:var(--gold);color:var(--dark);transform:translateY(-2px)}
+
+        /* Navbar */
+        .navbar{background:rgba(255,255,255,.98);backdrop-filter:blur(20px);position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.08);transition:var(--transition)}
+        .navbar .container{display:flex;justify-content:space-between;align-items:center;padding:10px 20px}
+        .nav-brand{display:flex;align-items:center;gap:12px}
+        .nav-brand img{height:50px;width:50px;border-radius:50%;object-fit:cover;border:2px solid var(--primary)}
+        .nav-brand-text h1{font-size:1rem;color:var(--primary);font-family:'Poppins',sans-serif;font-weight:700}
+        .nav-brand-text span{font-size:.7rem;color:var(--gray);display:block}
+        .nav-links{display:flex;list-style:none;gap:5px;align-items:center}
+        .nav-links a{padding:8px 14px;font-size:.88rem;font-weight:500;color:var(--dark);border-radius:8px;font-family:'Poppins',sans-serif}
+        .nav-links a:hover,.nav-links a.active{color:var(--primary);background:rgba(26,82,118,.08)}
+        .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;padding:5px}
+        .hamburger span{display:block;width:25px;height:3px;background:var(--dark);border-radius:3px;transition:var(--transition)}
+
+        /* Hero */
+        .hero{background:var(--gradient-dark);color:var(--white);padding:100px 0 80px;position:relative;overflow:hidden}
+        .hero::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(41,128,185,.15) 0%,transparent 70%);border-radius:50%}
+        .hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(230,126,34,.1) 0%,transparent 70%);border-radius:50%}
+        .hero .container{position:relative;z-index:2;text-align:center}
+        .hero-badge{display:inline-block;background:rgba(243,156,18,.2);color:var(--gold);padding:8px 20px;border-radius:30px;font-size:.85rem;font-weight:600;margin-bottom:20px;border:1px solid rgba(243,156,18,.3);font-family:'Poppins',sans-serif}
+        .hero h2{font-size:3rem;font-weight:900;margin-bottom:10px;letter-spacing:-1px}
+        .hero h3{font-size:1.5rem;font-weight:400;color:rgba(255,255,255,.8);margin-bottom:15px}
+        .hero-college-name{font-size:1rem;color:rgba(255,255,255,.6);margin-bottom:30px;font-family:'Poppins',sans-serif}
+        .hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:40px}
+        .hero-stat{text-align:center}
+        .hero-stat .number{font-size:2.5rem;font-weight:900;color:var(--gold);font-family:'Poppins',sans-serif}
+        .hero-stat .label{font-size:.85rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:1px}
+        .hero-buttons{margin-top:35px;display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:50px;font-weight:600;font-size:.95rem;font-family:'Poppins',sans-serif;cursor:pointer;border:none;transition:var(--transition)}
+        .btn-primary{background:var(--gradient-accent);color:var(--white);box-shadow:0 4px 15px rgba(230,126,34,.4)}
+        .btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(230,126,34,.5)}
+        .btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.3)}
+        .btn-outline:hover{background:rgba(255,255,255,.1);border-color:var(--white)}
+
+        /* Section */
+        .section{padding:80px 0}
+        .section-alt{background:var(--light)}
+        .section-title{text-align:center;margin-bottom:50px}
+        .section-title h2{font-size:2.2rem;color:var(--primary-dark);margin-bottom:10px}
+        .section-title p{color:var(--gray);font-size:1.05rem;max-width:600px;margin:0 auto}
+        .section-title .divider{width:60px;height:4px;background:var(--gradient-accent);margin:15px auto;border-radius:2px}
+
+        /* About */
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+        .about-content p{margin-bottom:15px;color:#444;font-size:1.02rem}
+        .about-image{position:relative}
+        .about-image img{border-radius:var(--radius);box-shadow:var(--shadow);width:100%;height:400px;object-fit:cover}
+        .about-image .experience-badge{position:absolute;bottom:-20px;right:-20px;background:var(--gradient-accent);color:var(--white);padding:20px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow)}
+        .experience-badge .num{font-size:2rem;font-weight:900;display:block;font-family:'Poppins',sans-serif}
+        .experience-badge .text{font-size:.8rem;text-transform:uppercase;letter-spacing:1px}
+
+        /* VM */
+        .vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+        .vm-card{background:var(--white);padding:40px;border-radius:var(--radius);box-shadow:var(--shadow);position:relative;overflow:hidden;transition:var(--transition)}
+        .vm-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+        .vm-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--gradient-accent)}
+        .vm-card .icon{width:60px;height:60px;border-radius:12px;background:rgba(26,82,118,.08);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--primary);margin-bottom:20px}
+        .vm-card h3{font-size:1.4rem;color:var(--primary-dark);margin-bottom:15px}
+        .vm-card p,.vm-card ul{color:#555}
+        .vm-card ul{margin-top:10px;padding-left:20px}
+        .vm-card ul li{margin-bottom:6px;font-size:.95rem}
+
+        /* Features */
+        .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+        .feature-card{background:var(--white);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;transition:var(--transition)}
+        .feature-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover)}
+        .feature-card .icon{width:70px;height:70px;border-radius:50%;background:rgba(26,82,118,.08);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem;color:var(--primary);transition:var(--transition)}
+        .feature-card:hover .icon{background:var(--gradient-primary);color:var(--white)}
+        .feature-card h3{font-size:1.15rem;color:var(--primary-dark);margin-bottom:10px;font-family:'Poppins',sans-serif}
+        .feature-card p{color:#666;font-size:.92rem}
+
+        /* Stats */
+        .stats-section{background:var(--gradient-dark);padding:80px 0;color:var(--white)}
+        .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+        .stat-card{text-align:center;padding:30px 20px;background:rgba(255,255,255,.05);border-radius:var(--radius);border:1px solid rgba(255,255,255,.1);transition:var(--transition)}
+        .stat-card:hover{background:rgba(255,255,255,.1);transform:translateY(-5px)}
+        .stat-card .stat-icon{font-size:2rem;color:var(--gold);margin-bottom:15px}
+        .stat-card .stat-number{font-size:2.5rem;font-weight:900;color:var(--white);font-family:'Poppins',sans-serif}
+        .stat-card .stat-label{font-size:.85rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:1px;margin-top:5px}
+
+        /* Table */
+        .academic-table{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+        .academic-table thead{background:var(--gradient-primary);color:var(--white)}
+        .academic-table th,.academic-table td{padding:15px 20px;text-align:left}
+        .academic-table tbody tr{border-bottom:1px solid var(--light-gray);transition:var(--transition)}
+        .academic-table tbody tr:hover{background:rgba(26,82,118,.04)}
+        .academic-table tbody tr:nth-child(even){background:var(--light)}
+
+        /* Faculty */
+        .faculty-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:30px}
+        .faculty-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition)}
+        .faculty-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+        .faculty-card img{width:100%;height:280px;object-fit:cover}
+        .faculty-info{padding:20px;text-align:center}
+        .faculty-info h3{font-size:1.1rem;color:var(--primary-dark);font-family:'Poppins',sans-serif}
+        .faculty-info .designation{color:var(--accent);font-size:.9rem;font-weight:600}
+        .faculty-info .qualification{color:var(--gray);font-size:.85rem;margin-top:5px}
+
+        /* Activities */
+        .activities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:30px}
+        .activity-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:var(--transition)}
+        .activity-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+        .activity-card img{width:100%;height:220px;object-fit:cover}
+        .activity-card .activity-content{padding:25px}
+        .activity-card .activity-date{display:inline-block;background:rgba(26,82,118,.08);color:var(--primary);padding:4px 12px;border-radius:20px;font-size:.8rem;font-weight:600;margin-bottom:10px}
+        .activity-card h3{font-size:1.15rem;color:var(--primary-dark);margin-bottom:10px;font-family:'Poppins',sans-serif}
+        .activity-card p{color:#666;font-size:.92rem}
+
+        /* Gallery */
+        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:15px}
+        .gallery-item{position:relative;border-radius:var(--radius);overflow:hidden;cursor:pointer;aspect-ratio:4/3}
+        .gallery-item img{width:100%;height:100%;object-fit:cover;transition:var(--transition)}
+        .gallery-item:hover img{transform:scale(1.05)}
+        .gallery-item .overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));color:white;padding:20px;transform:translateY(100%);transition:var(--transition)}
+        .gallery-item:hover .overlay{transform:translateY(0)}
+
+        /* Documents */
+        .documents-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+        .doc-card{background:var(--white);padding:25px;border-radius:var(--radius);box-shadow:var(--shadow);display:flex;align-items:center;gap:15px;transition:var(--transition)}
+        .doc-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+        .doc-card .doc-icon{width:55px;height:55px;border-radius:12px;background:rgba(192,57,43,.1);display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--secondary);flex-shrink:0}
+        .doc-card .doc-info h4{font-size:.95rem;color:var(--primary-dark);font-family:'Poppins',sans-serif}
+        .doc-card .doc-info p{font-size:.82rem;color:var(--gray)}
+        .doc-card .download-btn{margin-left:auto;color:var(--primary);font-size:1.2rem;flex-shrink:0}
+        .doc-card .download-btn:hover{color:var(--accent)}
+
+        /* Software */
+        .software-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:25px}
+        .software-card{background:var(--white);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center;transition:var(--transition)}
+        .software-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+        .software-card .sw-icon{width:70px;height:70px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-size:1.5rem;color:var(--white)}
+        .software-card h3{font-size:1.05rem;color:var(--primary-dark);font-family:'Poppins',sans-serif;margin-bottom:8px}
+        .software-card p{font-size:.88rem;color:var(--gray)}
+        .software-card .badge-premium{display:inline-block;background:var(--gradient-accent);color:white;padding:3px 12px;border-radius:20px;font-size:.75rem;font-weight:600;margin-top:10px}
+
+        /* Syllabus */
+        .syllabus-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+        .syllabus-card{background:var(--white);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow)}
+        .syllabus-card h3{font-size:1.15rem;color:var(--primary-dark);font-family:'Poppins',sans-serif;margin-bottom:15px;border-bottom:2px solid var(--light-gray);padding-bottom:10px}
+        .syllabus-card ul{list-style:none;padding:0}
+        .syllabus-card ul li{padding:8px 0;border-bottom:1px solid var(--light-gray);font-size:.92rem;color:#444;display:flex;align-items:center;gap:10px}
+        .syllabus-card ul li i{color:var(--primary);font-size:.8rem}
+        .syllabus-card ul li:last-child{border-bottom:none}
+        .marks-badge{background:rgba(26,82,118,.08);color:var(--primary);padding:2px 10px;border-radius:20px;font-size:.75rem;font-weight:600;margin-left:auto;white-space:nowrap}
+
+        /* Contact */
+        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+        .contact-info-card{display:flex;align-items:flex-start;gap:15px;margin-bottom:25px}
+        .contact-info-card .ci-icon{width:50px;height:50px;border-radius:12px;background:rgba(26,82,118,.08);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.2rem;flex-shrink:0}
+        .contact-info-card h4{font-size:1rem;color:var(--primary-dark);font-family:'Poppins',sans-serif}
+        .contact-info-card p{color:var(--gray);font-size:.92rem}
+        .map-container{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+        .map-container iframe{width:100%;height:400px;border:none}
+
+        /* Footer */
+        .footer{background:var(--gradient-dark);color:var(--white);padding:60px 0 20px}
+        .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+        .footer h4{font-size:1.1rem;margin-bottom:20px;font-family:'Poppins',sans-serif;color:var(--gold)}
+        .footer p,.footer a{color:rgba(255,255,255,.7);font-size:.9rem}
+        .footer a:hover{color:var(--gold)}
+        .footer-links{list-style:none}
+        .footer-links li{margin-bottom:10px}
+        .footer-links li a::before{content:'\203A';margin-right:8px;color:var(--gold)}
+        .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);margin-right:10px;margin-top:10px;font-size:1rem;transition:var(--transition)}
+        .footer-social a:hover{background:var(--gold);color:var(--dark);transform:translateY(-3px)}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center}
+        .footer-bottom p{font-size:.85rem}
+        .visitor-counter{text-align:center;padding:20px;background:rgba(255,255,255,.05);border-radius:var(--radius);margin-top:20px}
+        .visitor-counter .vc-number{font-size:1.8rem;font-weight:900;color:var(--gold);font-family:'Poppins',sans-serif}
+        .visitor-counter .vc-label{font-size:.8rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px}
+
+        /* Back to top */
+        .back-to-top{position:fixed;bottom:30px;right:30px;width:50px;height:50px;border-radius:50%;background:var(--gradient-primary);color:var(--white);border:none;cursor:pointer;font-size:1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);opacity:0;visibility:hidden;transition:var(--transition);z-index:999}
+        .back-to-top.visible{opacity:1;visibility:visible}
+        .back-to-top:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+
+        /* Lightbox */
+        .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:10000;justify-content:center;align-items:center}
+        .lightbox.active{display:flex}
+        .lightbox img{max-width:90%;max-height:90vh;border-radius:8px}
+        .lightbox-close{position:absolute;top:20px;right:30px;color:white;font-size:2rem;cursor:pointer;z-index:10001}
+
+        /* Responsive */
+        @media(max-width:992px){
+            .hero h2{font-size:2.2rem}
+            .about-grid,.contact-grid,.syllabus-grid{grid-template-columns:1fr}
+            .features-grid{grid-template-columns:repeat(2,1fr)}
+            .stats-grid{grid-template-columns:repeat(2,1fr)}
+            .footer-grid{grid-template-columns:repeat(2,1fr)}
+            .vm-grid{grid-template-columns:1fr}
+        }
+        @media(max-width:768px){
+            .top-bar{display:none}
+            .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--white);flex-direction:column;padding:20px;box-shadow:var(--shadow)}
+            .nav-links.active{display:flex}
+            .hamburger{display:flex}
+            .hero{padding:60px 0 50px}
+            .hero h2{font-size:1.8rem}
+            .hero h3{font-size:1.1rem}
+            .hero-stats{gap:20px}
+            .hero-stat .number{font-size:1.8rem}
+            .section{padding:50px 0}
+            .section-title h2{font-size:1.6rem}
+            .features-grid{grid-template-columns:1fr}
+            .stats-grid{grid-template-columns:1fr 1fr}
+            .activities-grid{grid-template-columns:1fr}
+            .footer-grid{grid-template-columns:1fr}
+        }
+        @media(max-width:480px){
+            .hero h2{font-size:1.5rem}
+            .stats-grid{grid-template-columns:1fr}
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== PRELOADER ===== -->
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
-
-    <!-- ===== TOP BAR ===== -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="top-bar-left">
-                <span><i class="fas fa-map-marker-alt"></i> Udgir, Dist. Latur, Maharashtra - 413517</span>
-                <span><i class="fas fa-phone"></i> <a href="tel:+91XXXXXXXXXX">+91-XXXXXXXXXX</a></span>
-                <span><i class="fas fa-envelope"></i> <a href="mailto:rachanasharir.damc@gmail.com">rachanasharir.damc@gmail.com</a></span>
-            </div>
-            <div class="top-bar-right">
-                <div class="social-links-top">
-                    <!-- EDIT: Replace # with your actual social media URLs -->
-                    <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a>
-                </div>
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-left">
+            <span><i class="fas fa-map-marker-alt"></i> Degloor Road, Udgir, Dist. Latur, Maharashtra - 413517</span>
+            <span><i class="fas fa-phone"></i> <a href="tel:+912385259825">(02385) 259825</a></span>
+            <span><i class="fas fa-envelope"></i> <a href="mailto:contact@damchudgir.edu.in">contact@damchudgir.edu.in</a></span>
+        </div>
+        <div class="top-bar-right">
+            <div class="social-links-top">
+                <a href="https://www.facebook.com/p/Department-of-Rachana-Sharir-DAMCH-Udgir-61578976656120/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/damchudgir/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- ===== NAVIGATION ===== -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="nav-brand">
-                <!-- EDIT: Replace with your actual logo path -->
-                <img src="https://via.placeholder.com/50x50/1a5276/ffffff?text=RS" alt="Department Logo">
-                <div class="nav-brand-text">
-                    <h1>Dept. of Rachana Sharir</h1>
-                    <span>Dhanwantari Ayurved Medical College, Udgir</span>
-                </div>
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#facilities">Facilities</a></li>
-                <li><a href="#faculty">Faculty</a></li>
-                <li><a href="#activities">Activities</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#documents">Documents</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="container">
+        <a href="#home" class="nav-brand">
+            <img src="images/logo.png" alt="DAMC Logo" onerror="this.src='https://via.placeholder.com/50x50/1a5276/ffffff?text=RS'">
+            <div class="nav-brand-text">
+                <h1>Dept. of Rachana Sharir</h1>
+                <span>DAMC &amp; Hospital, Udgir</span>
             </div>
-        </div>
-    </nav>
-
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-badge">
-                <i class="fas fa-award"></i> NCISM 2021 Pattern | Affiliated to MUHS, Nashik
-            </div>
-            <h2>Department of Rachana Sharir</h2>
-            <h3>(Human Anatomy)</h3>
-            <p class="hero-college-name">
-                Bal Bhagwan Shikshan Prasarak Mandal's<br>
-                <strong>Dhanwantari Ayurved Medical College, Udgir</strong>
-            </p>
-
-            <div class="hero-stats">
-                <div class="hero-stat" data-aos="fade-up">
-                    <div class="number" id="counter1">100</div>
-                    <div class="label">Student Intake</div>
-                </div>
-                <div class="hero-stat" data-aos="fade-up" data-aos-delay="100">
-                    <div class="number" id="counter2">204</div>
-                    <div class="label">Specimens</div>
-                </div>
-                <div class="hero-stat" data-aos="fade-up" data-aos-delay="200">
-                    <div class="number" id="counter3">237</div>
-                    <div class="label">Models</div>
-                </div>
-                <div class="hero-stat" data-aos="fade-up" data-aos-delay="300">
-                    <div class="number" id="counter4">81</div>
-                    <div class="label">Library Books</div>
-                </div>
-            </div>
-
-            <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary"><i class="fas fa-info-circle"></i> Explore Department</a>
-                <a href="#documents" class="btn btn-outline"><i class="fas fa-file-pdf"></i> View Documents</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>About the Department</h2>
-                <div class="divider"></div>
-                <p>Shaping the future of Ayurvedic anatomical education with modern tools and traditional wisdom</p>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-content" data-aos="fade-right">
-                    <p>
-                        The <strong>Department of Rachana Sharir (Human Anatomy)</strong> at BBSPM's Dhanwantari Ayurved Medical College, Udgir,
-                        is one of the fundamental pre-clinical departments dedicated to imparting comprehensive knowledge of human anatomy
-                        integrated with Ayurvedic principles as described in classical texts.
-                    </p>
-                    <p>
-                        Our department follows the <strong>NCISM 2021 syllabus pattern</strong> and is committed to delivering quality education
-                        through a blend of traditional Ayurvedic anatomical concepts (Shareera Rachana) and modern anatomical sciences. From the
-                        academic year <strong>2025-26</strong>, the intake capacity has been increased from <strong>60 to 100 students</strong>,
-                        reflecting the growing trust and demand for our educational excellence.
-                    </p>
-                    <p>
-                        The department is well-equipped with a modern <strong>Dissection Hall</strong> featuring 1 Demo Station and 4 Practice Stations,
-                        a rich <strong>Museum</strong> housing specimens, models, and charts, along with state-of-the-art digital learning tools
-                        including the premium <strong>Complete Anatomy (Elsevier)</strong> software subscription worth ₹4,00,000 annually.
-                    </p>
-                    <p>
-                        We actively engage in community outreach through <strong>Organ Donation Awareness</strong> programs, health awareness campaigns,
-                        school visits, exhibitions, rallies, and street plays (Pathnatya), contributing to societal well-being beyond the classroom.
-                    </p>
-                </div>
-                <div class="about-image" data-aos="fade-left">
-                    <!-- EDIT: Replace with actual department image -->
-                    <img src="https://via.placeholder.com/550x400/1a5276/ffffff?text=Department+of+Rachana+Sharir" alt="Department of Rachana Sharir">
-                    <div class="experience-badge">
-                        <span class="num">100</span>
-                        <span class="text">Intake 2025-26</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== VISION & MISSION ===== -->
-    <section class="section section-alt" id="vision-mission">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Vision &amp; Mission</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="vm-grid">
-                <div class="vm-card" data-aos="fade-right">
-                    <div class="icon"><i class="fas fa-eye"></i></div>
-                    <h3>Our Vision</h3>
-                    <p>
-                        To be a centre of excellence in Ayurvedic anatomical education and research, bridging the classical Shareera Rachana
-                        knowledge with modern anatomical sciences, and producing competent Ayurvedic physicians who understand the structural
-                        foundation of the human body in both traditional and contemporary perspectives.
-                    </p>
-                    <!-- EDIT: Replace with your actual vision statement -->
-                </div>
-                <div class="vm-card" data-aos="fade-left">
-                    <div class="icon"><i class="fas fa-bullseye"></i></div>
-                    <h3>Our Mission</h3>
-                    <p>
-                        To provide high-quality anatomical education through innovative teaching methodologies, hands-on dissection training,
-                        digital learning tools, and integration of Ayurvedic and modern anatomical concepts. To promote organ donation awareness,
-                        community health education, and research in the field of Rachana Sharir. To nurture students who are skilled in
-                        understanding human structural organization for better clinical practice.
-                    </p>
-                    <!-- EDIT: Replace with your actual mission statement -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FACILITIES / FEATURES ===== -->
-    <section class="section" id="facilities">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Department Facilities &amp; Features</h2>
-                <div class="divider"></div>
-                <p>State-of-the-art infrastructure for comprehensive anatomical education</p>
-            </div>
-
-            <div class="features-grid">
-
-                <div class="feature-card" data-aos="fade-up">
-                    <div class="icon"><i class="fas fa-cut"></i></div>
-                    <h3>Dissection Hall</h3>
-                    <p>Well-equipped hall with 1 Demo Station and 4 Practice Stations for hands-on cadaveric dissection training as per NCISM guidelines.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon"><i class="fas fa-landmark"></i></div>
-                    <h3>Anatomy Museum</h3>
-                    <p>A comprehensive museum housing 204 specimens, 237 models, and 151 charts covering all systems of the human body.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon"><i class="fas fa-laptop-medical"></i></div>
-                    <h3>Complete Anatomy (Elsevier)</h3>
-                    <p>Premium 3D anatomy software with annual subscription worth ₹4,00,000 — providing students with interactive digital dissection experience.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="icon"><i class="fas fa-projector"></i></div>
-                    <h3>Projector &amp; AV Room</h3>
-                    <p>Dedicated room with projector facility for PowerPoint presentations, video lectures, and multimedia-based teaching.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="icon"><i class="fas fa-book-medical"></i></div>
-                    <h3>Department Library</h3>
-                    <p>Collection of 81 reference books including classical Ayurvedic texts and modern anatomy textbooks for student reference.</p>
-                </div>
-
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="icon"><i class="fas fa-desktop"></i></div>
-                    <h3>Digital Learning Tools</h3>
-                    <p>Access to Visible Body Atlas, 3D4Medical Anatomy, Ayurvedic Rachana Sharir App, and BioDigital Human software for enhanced learning.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== DEPARTMENT AT A GLANCE (STATS) ===== -->
-    <section class="stats-section" id="stats">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2 style="color: white;">Department at a Glance</h2>
-                <div class="divider"></div>
-                <p style="color: rgba(255,255,255,0.7);">Key statistics for Academic Year — January 2025 to December 2025</p>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card" data-aos="fade-up">
-                    <div class="stat-icon"><i class="fas fa-bone"></i></div>
-                    <div class="stat-number">204</div>
-                    <div class="stat-label">Specimens</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stat-icon"><i class="fas fa-cubes"></i></div>
-                    <div class="stat-number">237</div>
-                    <div class="stat-label">Models</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-icon"><i class="fas fa-map"></i></div>
-                    <div class="stat-number">151</div>
-                    <div class="stat-label">Charts</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-icon"><i class="fas fa-book"></i></div>
-                    <div class="stat-number">81</div>
-                    <div class="stat-label">Library Books</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="stat-icon"><i class="fas fa-file-powerpoint"></i></div>
-                    <div class="stat-number">222</div>
-                    <div class="stat-label">PPT Presentations</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="stat-icon"><i class="fas fa-images"></i></div>
-                    <div class="stat-number">100</div>
-                    <div class="stat-label">Teaching Slides</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
-                    <div class="stat-number">100</div>
-                    <div class="stat-label">Student Intake (2025-26)</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="700">
-                    <div class="stat-icon"><i class="fas fa-tools"></i></div>
-                    <div class="stat-number">--</div>
-                    <div class="stat-label">Dissection Instruments</div>
-                    <!-- EDIT: Replace -- with actual number -->
-                </div>
-            </div>
-
-            <!-- ACADEMIC HOURS TABLE -->
-            <div style="margin-top: 50px;" data-aos="fade-up">
-                <h3 style="color: var(--gold); text-align: center; margin-bottom: 25px; font-family: 'Poppins', sans-serif;">
-                    Academic Hours Summary (Jan 2025 - Dec 2025)
-                </h3>
-                <div style="overflow-x: auto;">
-                    <table class="academic-table">
-                        <thead>
-                            <tr>
-                                <th>Sr. No.</th>
-                                <th>Parameter</th>
-                                <th>Hours / Count</th>
-                                <th>Remarks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Theory Lecture Hours</td>
-                                <td>-- </td>
-                                <td><!-- EDIT: Add data --></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Non-Lecture Teaching Hours</td>
-                                <td>-- </td>
-                                <td><!-- EDIT: Add data --></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Practical / Dissection Hours</td>
-                                <td>-- </td>
-                                <td><!-- EDIT: Add data --></td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>PowerPoint Presentations</td>
-                                <td>222</td>
-                                <td>Departmental teaching PPTs</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Teaching Slides</td>
-                                <td>100</td>
-                                <td>Histology &amp; Anatomy slides</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Awareness Programs Conducted</td>
-                                <td>-- </td>
-                                <td>Organ donation, health camps etc.</td>
-                            </tr>
-                            <!-- EDIT: Add more rows as needed -->
-                        </tbody>
-                    </table>
-                </div>
-                <p style="text-align: center; color: rgba(255,255,255,0.5); margin-top: 15px; font-size: 0.85rem;">
-                    * Replace "--" with actual figures. You can edit the HTML to add or update these values anytime.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SOFTWARE TOOLS ===== -->
-    <section class="section" id="software">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Digital Learning Tools &amp; Software</h2>
-                <div class="divider"></div>
-                <p>Modern technology-enhanced learning resources available for students</p>
-            </div>
-
-            <div class="software-grid">
-                <div class="software-card" data-aos="fade-up">
-                    <div class="sw-icon"><i class="fas fa-brain"></i></div>
-                    <h3>Complete Anatomy (Elsevier)</h3>
-                    <p>Premium 3D anatomy platform with detailed dissection layers, clinical correlations, and interactive quizzes.</p>
-                    <span class="badge-premium">₹4,00,000 Annual Subscription</span>
-                </div>
-
-                <div class="software-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="sw-icon"><i class="fas fa-eye"></i></div>
-                    <h3>Visible Body Atlas</h3>
-                    <p>3D human anatomy atlas with detailed visualization of all body systems, muscles, bones, and organs.</p>
-                </div>
-
-                <div class="software-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="sw-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>3D4Medical Anatomy</h3>
-                    <p>Award-winning 3D anatomy learning platform with AR capabilities and interactive models.</p>
-                </div>
-
-                <div class="software-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="sw-icon"><i class="fas fa-om"></i></div>
-                    <h3>Ayurvedic Rachana Sharir</h3>
-                    <p>Specialized software for learning Ayurvedic anatomical concepts as per classical texts (Sushruta, Charaka, Vagbhata).</p>
-                </div>
-
-                <div class="software-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="sw-icon"><i class="fas fa-dna"></i></div>
-                    <h3>BioDigital Human</h3>
-                    <p>Web-based 3D human body visualization platform with detailed anatomy and physiology content.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FACULTY SECTION ===== -->
-    <section class="section section-alt" id="faculty">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Our Faculty</h2>
-                <div class="divider"></div>
-                <p>Experienced and dedicated team guiding the next generation of Ayurvedic practitioners</p>
-            </div>
-
-            <div class="faculty-grid">
-                <!-- FACULTY CARD 1 - EDIT with actual data -->
-                <div class="faculty-card" data-aos="fade-up">
-                    <img src="https://via.placeholder.com/300x280/1a5276/ffffff?text=Faculty+Photo" alt="Faculty Name">
-                    <div class="faculty-info">
-                        <h3>Dr. [Faculty Name]</h3>
-                        <p class="designation">Professor &amp; HOD</p>
-                        <p class="qualification">M.D. (Rachana Sharir), Ph.D.</p>
-                    </div>
-                </div>
-
-                <!-- FACULTY CARD 2 -->
-                <div class="faculty-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://via.placeholder.com/300x280/2980b9/ffffff?text=Faculty+Photo" alt="Faculty Name">
-                    <div class="faculty-info">
-                        <h3>Dr. [Faculty Name]</h3>
-                        <p class="designation">Associate Professor</p>
-                        <p class="qualification">M.D. (Rachana Sharir)</p>
-                    </div>
-                </div>
-
-                <!-- FACULTY CARD 3 -->
-                <div class="faculty-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/300x280/e67e22/ffffff?text=Faculty+Photo" alt="Faculty Name">
-                    <div class="faculty-info">
-                        <h3>Dr. [Faculty Name]</h3>
-                        <p class="designation">Assistant Professor</p>
-                        <p class="qualification">M.D. (Rachana Sharir)</p>
-                    </div>
-                </div>
-
-                <!-- EDIT: Add more faculty cards as needed by copying the above pattern -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ACTIVITIES SECTION ===== -->
-    <section class="section" id="activities">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Department Activities</h2>
-                <div class="divider"></div>
-                <p>Awareness programs, exhibitions, rallies, and community outreach initiatives</p>
-            </div>
-
-            <div class="activities-grid">
-
-                <!-- ACTIVITY 1 -->
-                <div class="activity-card" data-aos="fade-up">
-                    <img src="https://via.placeholder.com/400x220/c0392b/ffffff?text=Organ+Donation+Awareness" alt="Organ Donation Awareness">
-                    <div class="activity-content">
-                        <span class="activity-date"><i class="far fa-calendar-alt"></i> August 2025</span>
-                        <h3>Organ Donation Awareness Program</h3>
-                        <p>Annual organ donation awareness drive including short film screening, awareness rally, street play (Pathnatya), and pledge ceremony for students and community members.</p>
-                    </div>
-                </div>
-
-                <!-- ACTIVITY 2 -->
-                <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://via.placeholder.com/400x220/e67e22/ffffff?text=School+Visits" alt="School Visits">
-                    <div class="activity-content">
-                        <span class="activity-date"><i class="far fa-calendar-alt"></i> 2025-26</span>
-                        <h3>School Visits &amp; Anatomy Exhibition</h3>
-                        <p>Local school students visit the department museum and dissection hall. Interactive sessions conducted to introduce basic anatomy and inspire young minds towards medical science.</p>
-                    </div>
-                </div>
-
-                <!-- ACTIVITY 3 -->
-                <div class="activity-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://via.placeholder.com/400x220/1a5276/ffffff?text=Health+Awareness+Camp" alt="Health Awareness Camp">
-                    <div class="activity-content">
-                        <span class="activity-date"><i class="far fa-calendar-alt"></i> 2025-26</span>
-                        <h3>Health Awareness Activities</h3>
-                        <p>Various health awareness camps and programs organized by the department including body donation awareness, anatomical exhibitions, and interactive workshops.</p>
-                    </div>
-                </div>
-
-                <!-- EDIT: Add more activities by copying the above pattern -->
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== GALLERY SECTION ===== -->
-    <section class="section section-alt" id="gallery">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Photo Gallery</h2>
-                <div class="divider"></div>
-                <p>Glimpses of our department, activities, and events</p>
-            </div>
-
-            <div class="gallery-grid">
-                <!-- EDIT: Replace placeholder images with actual department photos -->
-                <div class="gallery-item" data-aos="fade-up" onclick="openLightbox(this)">
-                    <img src="https://via.placeholder.com/400x300/1a5276/ffffff?text=Dissection+Hall" alt="Dissection Hall">
-                    <div class="overlay"><p>Dissection Hall</p></div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="50" onclick="openLightbox(this)">
-                    <img src="https://via.placeholder.com/400x300/2980b9/ffffff?text=Museum" alt="Museum">
-                    <div class="overlay"><p>Anatomy Museum</p></div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
-                    <img src="https://via.placeholder.com/400x300/e67e22/ffffff?text=Specimens" alt="Specimens">
-                    <div class="overlay"><p>Specimen Collection</p></div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="150" onclick="openLightbox(this)">
-                    <img src="https://via.placeholder.com/400x300/c0392b/ffffff?text=Models" alt="Models">
-                    <div class="overlay"><p>Anatomy Models</p></div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
-                    <img src="https://via.placeholder.com/400x300/f39c12/333333?text=Digital+Lab" alt="Digital Lab">
-                    <div class="overlay"><p>Digital Learning Lab</p></div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="250" onclick="openLightbox(this)">
-                    <img src="https://via.placeholder.com/400x300/16213e/ffffff?text=Rally" alt="Awareness Rally">
-                    <div class="overlay"><p>Organ Donation Rally</p></div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox(this)">
-                    <img src="https://via.placeholder.com/400x300/0f3460/ffffff?text=Exhibition" alt="Exhibition">
-                    <div class="overlay"><p>Anatomy Exhibition</p></div>
-                </div>
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="350" onclick="openLightbox(this)">
-                    <img src="https://via.placeholder.com/400x300/27ae60/ffffff?text=Street+Play" alt="Street Play">
-                    <div class="overlay"><p>Pathnatya (Street Play)</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== LIGHTBOX ===== -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-        <img src="" alt="Gallery Image" id="lightboxImg">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#syllabus">Syllabus</a></li>
+            <li><a href="#faculty">Faculty</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#documents">Documents</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </div>
+</nav>
 
-    <!-- ===== DOCUMENTS SECTION ===== -->
-    <section class="section" id="documents">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Documents &amp; Files</h2>
-                <div class="divider"></div>
-                <p>Download department documents, syllabus, reports, and inspection files</p>
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-badge"><i class="fas fa-award"></i> NCISM 2021 Pattern | Affiliated to MUHS, Nashik | Est. 2000</div>
+        <h2>Department of Rachana Sharir</h2>
+        <h3>(Human Anatomy)</h3>
+        <p class="hero-college-name">Bal Bhagwan Shikshan Prasarak Mandal's<br><strong style="font-size:1.15rem;color:rgba(255,255,255,.9);">Dhanwantari Ayurved Medical College &amp; Hospital, Udgir</strong><br>Dist. Latur, Maharashtra</p>
+        <div class="hero-stats">
+            <div class="hero-stat" data-aos="fade-up"><div class="number">100</div><div class="label">Intake (2025-26)</div></div>
+            <div class="hero-stat" data-aos="fade-up" data-aos-delay="100"><div class="number">500</div><div class="label">Teaching Hours</div></div>
+            <div class="hero-stat" data-aos="fade-up" data-aos-delay="200"><div class="number">204</div><div class="label">Specimens</div></div>
+            <div class="hero-stat" data-aos="fade-up" data-aos-delay="300"><div class="number">237</div><div class="label">Models</div></div>
+        </div>
+        <div class="hero-buttons">
+            <a href="#about" class="btn btn-primary"><i class="fas fa-info-circle"></i> Explore Department</a>
+            <a href="#documents" class="btn btn-outline"><i class="fas fa-file-pdf"></i> View Documents</a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>About the Department</h2>
+            <div class="divider"></div>
+            <p>Bridging Classical Ayurvedic Anatomy with Modern Anatomical Sciences</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-content" data-aos="fade-right">
+                <p>The <strong>Department of Rachana Sharir (Human Anatomy)</strong> at BBSPM's Dhanwantari Ayurved Medical College &amp; Hospital, Udgir, is one of the fundamental pre-clinical departments established since the inception of the college in the year <strong>2000</strong>. The department is dedicated to imparting comprehensive knowledge of human anatomy integrated with Ayurvedic principles as described in classical texts of Sushruta, Charaka, and Vagbhata.</p>
+                <p>Our department follows the <strong>NCISM 2021 syllabus pattern (Subject Code: AyUG-RS)</strong> with a total of <strong>500 teaching hours</strong> comprising 180 Lecture Hours and 320 Non-Lecture Hours including practicals and dissection. The college is affiliated to <strong>MUHS, Nashik</strong> and approved by <strong>NCISM, New Delhi</strong>.</p>
+                <p>From the academic year <strong>2025-26</strong>, the intake capacity has been increased from <strong>60 to 100 students</strong>. The department is equipped with a modern Dissection Hall, a rich Museum, digital learning tools, and the premium Complete Anatomy (Elsevier) software worth &#8377;4,00,000 annual subscription.</p>
+                <p>The college campus sprawls over <strong>7 acres</strong> with a digital library of <strong>10,000+ books</strong> and a verdant herbal garden with <strong>260+ species</strong> and <strong>850+ plants</strong>.</p>
             </div>
-
-            <div class="documents-grid">
-
-                <!-- DOCUMENT 1 -->
-                <a href="documents/ncism-syllabus-2021.pdf" target="_blank" class="doc-card" data-aos="fade-up">
-                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
-                    <div class="doc-info">
-                        <h4>NCISM 2021 Syllabus</h4>
-                        <p>Rachana Sharir syllabus as per NCISM 2021 pattern</p>
-                    </div>
-                    <span class="download-btn"><i class="fas fa-download"></i></span>
-                </a>
-
-                <!-- DOCUMENT 2 -->
-                <a href="documents/annual-report.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="doc-icon"><i class="fas fa-file-pdf"></i></div>
-                    <div class="doc-info">
-                        <h4>Annual Report 2025</h4>
-                        <p>Department annual activity report</p>
-                    </div>
-                    <span class="download-btn"><i class="fas fa-download"></i></span>
-                </a>
-
-                <!-- DOCUMENT 3 -->
-                <a href="documents/teaching-plan.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="doc-icon"><i class="fas fa-file-alt"></i></div>
-                    <div class="doc-info">
-                        <h4>Teaching Plan</h4>
-                        <p>Annual teaching schedule &amp; lesson plans</p>
-                    </div>
-                    <span class="download-btn"><i class="fas fa-download"></i></span>
-                </a>
-
-                <!-- DOCUMENT 4 -->
-                <a href="documents/inspection-file.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="doc-icon"><i class="fas fa-folder-open"></i></div>
-                    <div class="doc-info">
-                        <h4>Inspection File</h4>
-                        <p>Documents for regulatory inspection</p>
-                    </div>
-                    <span class="download-btn"><i class="fas fa-download"></i></span>
-                </a>
-
-                <!-- DOCUMENT 5 -->
-                <a href="documents/museum-inventory.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="doc-icon"><i class="fas fa-clipboard-list"></i></div>
-                    <div class="doc-info">
-                        <h4>Museum Inventory</h4>
-                        <p>Complete list of specimens, models &amp; charts</p>
-                    </div>
-                    <span class="download-btn"><i class="fas fa-download"></i></span>
-                </a>
-
-                <!-- DOCUMENT 6 -->
-                <a href="documents/timetable.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="doc-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <div class="doc-info">
-                        <h4>Time Table</h4>
-                        <p>Current academic year timetable</p>
-                    </div>
-                    <span class="download-btn"><i class="fas fa-download"></i></span>
-                </a>
-
-                <!-- EDIT: Add more documents by copying the above pattern -->
-                <!-- Change the href="documents/yourfile.pdf" to the actual file path -->
-
+            <div class="about-image" data-aos="fade-left">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOs1JvMUooyRu8438dTSiidzW9N4e-0dVGWRG-ZwCWTmOvTs4vOhlHYhA=w800-h600-s-no-gm" alt="Department of Rachana Sharir, DAMC Udgir">
+                <div class="experience-badge"><span class="num">25+</span><span class="text">Years Since Est.</span></div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== CONTACT SECTION ===== -->
-    <section class="section section-alt" id="contact">
-        <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Contact Us</h2>
-                <div class="divider"></div>
+<!-- VISION & MISSION -->
+<section class="section section-alt" id="vision-mission">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>Vision &amp; Mission</h2><div class="divider"></div></div>
+        <div class="vm-grid">
+            <div class="vm-card" data-aos="fade-right">
+                <div class="icon"><i class="fas fa-eye"></i></div>
+                <h3>Our Vision</h3>
+                <p>To establish the department as a Centre of Excellence in Ayurvedic anatomical education, research, and training. To provide health service and training in the field of Ashtang Ayurveda, keeping pace with modern medicine and techniques. To engrave professionals with profound knowledge of Rachana Sharir supplemented with scientific advances in modern anatomy.</p>
             </div>
+            <div class="vm-card" data-aos="fade-left">
+                <div class="icon"><i class="fas fa-bullseye"></i></div>
+                <h3>Our Mission</h3>
+                <ul>
+                    <li>To impart practical and clinical-based knowledge of Rachana Sharir and Anatomy.</li>
+                    <li>To provide thorough understanding of gross and microscopic structure of the human body in perspective of ancient and modern sciences.</li>
+                    <li>To promote innovation in teaching through PBL, CBL, ECE, Virtual Dissection, and cadaveric dissection methods.</li>
+                    <li>To promote organ donation awareness and community health education.</li>
+                    <li>To promote research activities and validate Ayurveda transmit modalities.</li>
+                    <li>To empower learners with best medical education coupled with leadership and professional skills.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <div class="contact-grid">
-                <div data-aos="fade-right">
-                    <div class="contact-info-card">
-                        <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <h4>Address</h4>
-                            <p>Department of Rachana Sharir,<br>
-                            BBSPM's Dhanwantari Ayurved Medical College,<br>
-                            Udgir, Dist. Latur, Maharashtra - 413517</p>
-                        </div>
-                    </div>
+<!-- FACILITIES -->
+<section class="section" id="facilities">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>Department Facilities &amp; Infrastructure</h2><div class="divider"></div><p>State-of-the-art infrastructure for comprehensive anatomical education</p></div>
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up">
+                <div class="icon"><i class="fas fa-cut"></i></div>
+                <h3>Dissection Hall</h3>
+                <p>Well-equipped hall with <strong>1 Demo Station</strong> and <strong>4 Practice Stations</strong> for hands-on cadaveric dissection training as per NCISM guidelines.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="fas fa-landmark"></i></div>
+                <h3>Anatomy Museum</h3>
+                <p>Comprehensive museum housing <strong>204 Specimens</strong>, <strong>237 Models</strong>, and <strong>151 Charts</strong> covering all systems of the human body.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon"><i class="fas fa-laptop-medical"></i></div>
+                <h3>Complete Anatomy (Elsevier)</h3>
+                <p>Premium 3D anatomy software with <strong>annual subscription worth &#8377;4,00,000</strong> providing interactive digital dissection experience.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon"><i class="fas fa-video"></i></div>
+                <h3>Projector &amp; AV Room</h3>
+                <p>Dedicated room with projector for PowerPoint presentations, 3D animated videos, and multimedia-based teaching.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon"><i class="fas fa-book-medical"></i></div>
+                <h3>Department Library</h3>
+                <p>Collection of <strong>81 reference books</strong> including classical Ayurvedic texts and modern anatomy textbooks.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon"><i class="fas fa-desktop"></i></div>
+                <h3>Digital Learning Tools</h3>
+                <p><strong>Visible Body Atlas</strong>, <strong>3D4Medical</strong>, <strong>Ayurvedic Rachana Sharir App</strong>, and <strong>BioDigital Human</strong> for enhanced learning.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <div class="contact-info-card">
-                        <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
-                        <div>
-                            <h4>Phone</h4>
-                            <!-- EDIT: Add actual phone number -->
-                            <p>+91-XXXXXXXXXX</p>
-                        </div>
-                    </div>
+<!-- DEPARTMENT AT A GLANCE -->
+<section class="stats-section" id="stats">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2 style="color:white;">Department at a Glance</h2><div class="divider"></div>
+            <p style="color:rgba(255,255,255,.7);">Key statistics — Academic Year 2025-26</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card" data-aos="fade-up"><div class="stat-icon"><i class="fas fa-bone"></i></div><div class="stat-number">204</div><div class="stat-label">Specimens</div></div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="100"><div class="stat-icon"><i class="fas fa-cubes"></i></div><div class="stat-number">237</div><div class="stat-label">Models</div></div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="200"><div class="stat-icon"><i class="fas fa-map"></i></div><div class="stat-number">151</div><div class="stat-label">Charts</div></div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="300"><div class="stat-icon"><i class="fas fa-book"></i></div><div class="stat-number">81</div><div class="stat-label">Library Books</div></div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="400"><div class="stat-icon"><i class="fas fa-file-powerpoint"></i></div><div class="stat-number">222</div><div class="stat-label">PPT Presentations</div></div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="500"><div class="stat-icon"><i class="fas fa-microscope"></i></div><div class="stat-number">100</div><div class="stat-label">Teaching Slides</div></div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="600"><div class="stat-icon"><i class="fas fa-user-graduate"></i></div><div class="stat-number">100</div><div class="stat-label">Intake 2025-26</div></div>
+            <div class="stat-card" data-aos="fade-up" data-aos-delay="700"><div class="stat-icon"><i class="fas fa-tools"></i></div><div class="stat-number">--</div><div class="stat-label">Dissection Instruments</div></div>
+        </div>
+    </div>
+</section>
 
-                    <div class="contact-info-card">
-                        <div class="ci-icon"><i class="fas fa-envelope"></i></div>
-                        <div>
-                            <h4>Email</h4>
-                            <!-- EDIT: Add actual email -->
-                            <p>rachanasharir.damc@gmail.com</p>
-                        </div>
-                    </div>
+<!-- SYLLABUS -->
+<section class="section" id="syllabus">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>NCISM 2021 Syllabus Overview</h2><div class="divider"></div><p>Subject Code: AyUG-RS | Rachana Sharir (Human Anatomy) | I Professional BAMS</p></div>
+        <div class="syllabus-grid">
+            <div class="syllabus-card" data-aos="fade-right">
+                <h3><i class="fas fa-file-alt" style="color:var(--primary);margin-right:8px;"></i> Paper I — Topics</h3>
+                <ul>
+                    <li><i class="fas fa-chevron-right"></i> Shariropkramaniya Shaarira <span class="marks-badge">6 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Paribhasha Shaarira <span class="marks-badge">4 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Garbha Shaarira <span class="marks-badge">15 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Asthi Shaarira <span class="marks-badge">4 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Sandhi Shaarira <span class="marks-badge">4 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Snayu Sharir <span class="marks-badge">3 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Peshi Shaarira <span class="marks-badge">3 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Kesha, Danta, Nakha Sharir <span class="marks-badge">4 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Embryology <span class="marks-badge">5 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Osteology <span class="marks-badge">12 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Arthrology <span class="marks-badge">10 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Myology <span class="marks-badge">4 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Nervous System <span class="marks-badge">14 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Endocrinology <span class="marks-badge">8 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Lymphatic System <span class="marks-badge">4 Marks</span></li>
+                </ul>
+            </div>
+            <div class="syllabus-card" data-aos="fade-left">
+                <h3><i class="fas fa-file-alt" style="color:var(--accent);margin-right:8px;"></i> Paper II — Topics</h3>
+                <ul>
+                    <li><i class="fas fa-chevron-right"></i> Pramana Sharira <span class="marks-badge">2 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Koshtha Evam Ashaya Sharira <span class="marks-badge">4 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Sira Sharir <span class="marks-badge">4 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Dhamani Sharir <span class="marks-badge">2 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Strotas Shaarira <span class="marks-badge">7 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Kala Shaarira <span class="marks-badge">4 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Indriya Shaarira <span class="marks-badge">3 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Twacha Sharir <span class="marks-badge">3 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Marma Sharira <span class="marks-badge">15 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Respiratory System <span class="marks-badge">10 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Digestive System <span class="marks-badge">12 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Cardiovascular System <span class="marks-badge">8 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Urinary System <span class="marks-badge">10 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Reproductive System <span class="marks-badge">6 Marks</span></li>
+                    <li><i class="fas fa-chevron-right"></i> Sensory Organs <span class="marks-badge">10 Marks</span></li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-top:40px;" data-aos="fade-up">
+            <div style="overflow-x:auto;">
+                <table class="academic-table">
+                    <thead><tr><th colspan="4" style="text-align:center;font-size:1.1rem;">AyUG-RS Examination — Marks Distribution (NCISM 2021)</th></tr><tr><th>Component</th><th>Paper I</th><th>Paper II</th><th>Total</th></tr></thead>
+                    <tbody>
+                        <tr><td>Theory (External)</td><td>100</td><td>100</td><td>200</td></tr>
+                        <tr><td>Practical (External)</td><td colspan="2" style="text-align:center;">100</td><td>100</td></tr>
+                        <tr><td>Internal Assessment</td><td colspan="2" style="text-align:center;">30</td><td>30</td></tr>
+                        <tr><td>Elective</td><td colspan="2" style="text-align:center;">70</td><td>70</td></tr>
+                        <tr style="background:rgba(26,82,118,.08);"><td><strong>Grand Total</strong></td><td colspan="2"></td><td><strong>400</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <div class="contact-info-card">
-                        <div class="ci-icon"><i class="fas fa-clock"></i></div>
-                        <div>
-                            <h4>Working Hours</h4>
-                            <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
-                        </div>
-                    </div>
+<!-- SOFTWARE -->
+<section class="section section-alt" id="software">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>Digital Learning Tools &amp; Software</h2><div class="divider"></div><p>Modern technology-enhanced learning resources for students</p></div>
+        <div class="software-grid">
+            <div class="software-card" data-aos="fade-up"><div class="sw-icon"><i class="fas fa-brain"></i></div><h3>Complete Anatomy (Elsevier)</h3><p>Premium 3D anatomy platform with detailed dissection layers, clinical correlations, and interactive quizzes.</p><span class="badge-premium">&#8377;4,00,000/Year</span></div>
+            <div class="software-card" data-aos="fade-up" data-aos-delay="100"><div class="sw-icon"><i class="fas fa-eye"></i></div><h3>Visible Body Atlas</h3><p>3D human anatomy atlas with detailed visualization of all body systems.</p></div>
+            <div class="software-card" data-aos="fade-up" data-aos-delay="200"><div class="sw-icon"><i class="fas fa-mobile-alt"></i></div><h3>3D4Medical Anatomy</h3><p>Award-winning 3D anatomy platform with AR capabilities and interactive models.</p></div>
+            <div class="software-card" data-aos="fade-up" data-aos-delay="300"><div class="sw-icon"><i class="fas fa-om"></i></div><h3>Ayurvedic Rachana Sharir</h3><p>Specialized software for Ayurvedic anatomical concepts as per Sushruta, Charaka, Vagbhata.</p></div>
+            <div class="software-card" data-aos="fade-up" data-aos-delay="400"><div class="sw-icon"><i class="fas fa-dna"></i></div><h3>BioDigital Human</h3><p>Web-based 3D human body visualization with anatomy and physiology content.</p></div>
+        </div>
+    </div>
+</section>
 
-                    <!-- SOCIAL MEDIA LINKS -->
-                    <div style="margin-top: 20px;">
-                        <h4 style="font-family: 'Poppins', sans-serif; color: var(--primary-dark); margin-bottom: 15px;">Follow Us</h4>
-                        <div class="footer-social">
-                            <!-- EDIT: Replace # with actual URLs -->
-                            <a href="#" target="_blank" style="background: #3b5998; color: white;"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" target="_blank" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white;"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank" style="background: #ff0000; color: white;"><i class="fab fa-youtube"></i></a>
-                            <a href="#" target="_blank" style="background: #0077b5; color: white;"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
+<!-- FACULTY -->
+<section class="section" id="faculty">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>Our Faculty</h2><div class="divider"></div><p>Experienced and dedicated team of Rachana Sharir department</p></div>
+        <div class="faculty-grid">
+            <div class="faculty-card" data-aos="fade-up">
+                <img src="images/faculty1.jpg" alt="Dr. Alka Bhandare" onerror="this.src='https://via.placeholder.com/300x280/1a5276/ffffff?text=Dr.+Alka+Bhandare'">
+                <div class="faculty-info"><h3>Vda. Alka Kishanrao Bhandare</h3><p class="designation">Professor &amp; HOD</p><p class="qualification">M.D. (Rachana Sharir) | Since Oct 2014</p></div>
+            </div>
+            <div class="faculty-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/faculty2.jpg" alt="Dr. Mayuri Thakur" onerror="this.src='https://via.placeholder.com/300x280/2980b9/ffffff?text=Dr.+Mayuri+Thakur'">
+                <div class="faculty-info"><h3>Vda. Mayuri Udaysingh Thakur</h3><p class="designation">Reader (Associate Professor)</p><p class="qualification">M.D. (Rachana Sharir) | Since Jul 2023</p></div>
+            </div>
+            <div class="faculty-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/faculty3.jpg" alt="Dr. Vishnukant Jadhav" onerror="this.src='https://via.placeholder.com/300x280/e67e22/ffffff?text=Dr.+Vishnukant+Jadhav'">
+                <div class="faculty-info"><h3>Vd. Vishnukant Rameshrao Jadhav</h3><p class="designation">Lecturer (Assistant Professor)</p><p class="qualification">M.D. (Rachana Sharir) | Since Apr 2022</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="section section-alt" id="activities">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>Department Activities</h2><div class="divider"></div><p>Awareness programs, exhibitions, competitions, and community outreach</p></div>
+        <div class="activities-grid">
+            <div class="activity-card" data-aos="fade-up">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOm7jwdVKnIm-oJ4AlBrQleYm0FRMZk7Xc_bE_Po_J29p1gyaUsEJDk=w600-h400-s-no-gm" alt="Trustee Babasaheb Patil Visit">
+                <div class="activity-content">
+                    <span class="activity-date"><i class="far fa-calendar-alt"></i> 2025</span>
+                    <h3>Trustee Hon. Babasaheb Patil Ji — Department Visit</h3>
+                    <p>Honorable Trustee Babasaheb Patil Ji visited the Department of Rachana Sharir and appreciated the departmental infrastructure, museum collection, digital learning facilities, and academic activities.</p>
                 </div>
-
-                <div class="map-container" data-aos="fade-left">
-                    <!-- EDIT: Replace with actual Google Maps embed URL for your college -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.0!2d77.39!3d18.39!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDIzJzI0LjAiTiA3N8KwMjMnMjQuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                    <!-- HOW TO GET YOUR MAP EMBED CODE:
-                         1. Go to Google Maps (maps.google.com)
-                         2. Search for your college
-                         3. Click "Share" → "Embed a map"
-                         4. Copy the iframe code and paste here
-                    -->
+            </div>
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOS4x_m3dLTUgHWXH8Q6ytrFj7hnBOdPNffQcKpsxOEWoJXAX8RQmQp=w600-h400-s-no-gm" alt="Anatomical Rangoli Competition">
+                <div class="activity-content">
+                    <span class="activity-date"><i class="far fa-calendar-alt"></i> 2025</span>
+                    <h3>Anatomical Rangoli Competition</h3>
+                    <p>Honorable Pro-Chancellor Dr. Milind Nikumbh visited the Anatomical Rangoli Competition organized by the Department of Rachana Sharir. Students demonstrated anatomical knowledge through creative rangoli art depicting human body structures.</p>
+                </div>
+            </div>
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczNQ_T_sopLgTBo1bDKnjbqFvlM8k3nRelWyICuNkc9RiE7xyC6eu1iX=w600-h400-s-no-gm" alt="Organ Exhibition for School Students">
+                <div class="activity-content">
+                    <span class="activity-date"><i class="far fa-calendar-alt"></i> 2025</span>
+                    <h3>Organ Exhibition — Poste Podar Learn School Visit</h3>
+                    <p>Students from Poste Podar Learn School visited the department for an interactive Organ Exhibition. School students were shown anatomical specimens, models, and charts to inspire interest in human body sciences and Ayurveda.</p>
+                </div>
+            </div>
+            <div class="activity-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczNcHFslGuDjgWu-2q5DjqkIPnpBGtE0MQHvMv7wNd4j5nBjNoCUk3CU=w600-h400-s-no-gm" alt="Yoga Day and Organ Donation Awareness">
+                <div class="activity-content">
+                    <span class="activity-date"><i class="far fa-calendar-alt"></i> June &amp; August 2025</span>
+                    <h3>International Yoga Day &amp; Organ Donation Day Awareness</h3>
+                    <p>The department organized awareness programs on International Yoga Day (June 21) and Organ Donation Day (August 13). Activities included rallies, short film screenings, street plays (Pathnatya), and pledge ceremonies promoting organ donation and healthy lifestyle.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h4>About Department</h4>
-                    <p>Department of Rachana Sharir (Human Anatomy), BBSPM's Dhanwantari Ayurved Medical College, Udgir.
-                    Committed to excellence in Ayurvedic anatomical education following NCISM 2021 pattern.</p>
+<!-- GALLERY -->
+<section class="section" id="gallery">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>Photo Gallery</h2><div class="divider"></div><p>Glimpses of our department, infrastructure, and events</p></div>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="fade-up" onclick="openLightbox(this)">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOs1JvMUooyRu8438dTSiidzW9N4e-0dVGWRG-ZwCWTmOvTs4vOhlHYhA=w500-h375-s-no-gm" alt="Department of Rachana Sharir">
+                <div class="overlay"><p>Department of Rachana Sharir</p></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="50" onclick="openLightbox(this)">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOm7jwdVKnIm-oJ4AlBrQleYm0FRMZk7Xc_bE_Po_J29p1gyaUsEJDk=w500-h375-s-no-gm" alt="Trustee Visit">
+                <div class="overlay"><p>Hon. Trustee Babasaheb Patil Ji — Department Visit</p></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOS4x_m3dLTUgHWXH8Q6ytrFj7hnBOdPNffQcKpsxOEWoJXAX8RQmQp=w500-h375-s-no-gm" alt="Anatomical Rangoli Competition">
+                <div class="overlay"><p>Anatomical Rangoli Competition — Pro-Chancellor Dr. Milind Nikumbh</p></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="150" onclick="openLightbox(this)">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczNQ_T_sopLgTBo1bDKnjbqFvlM8k3nRelWyICuNkc9RiE7xyC6eu1iX=w500-h375-s-no-gm" alt="Organ Exhibition School Visit">
+                <div class="overlay"><p>Organ Exhibition — Poste Podar Learn School Visit</p></div>
+            </div>
+            <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+                <img src="https://photos.fife.usercontent.google.com/pw/AP1GczNcHFslGuDjgWu-2q5DjqkIPnpBGtE0MQHvMv7wNd4j5nBjNoCUk3CU=w500-h375-s-no-gm" alt="Yoga Day and Organ Donation Awareness">
+                <div class="overlay"><p>International Yoga Day &amp; Organ Donation Day Awareness</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox"><span class="lightbox-close" onclick="closeLightbox()">&times;</span><img src="" alt="Gallery Image" id="lightboxImg"></div>
+
+<!-- DOCUMENTS -->
+<section class="section section-alt" id="documents">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>Documents &amp; Files</h2><div class="divider"></div><p>Download department documents, syllabus, reports, and inspection files</p></div>
+        <div class="documents-grid">
+            <a href="documents/ncism-syllabus-rachana-sharir.pdf" target="_blank" class="doc-card" data-aos="fade-up"><div class="doc-icon"><i class="fas fa-file-pdf"></i></div><div class="doc-info"><h4>NCISM 2021 Syllabus — Rachana Sharir</h4><p>AyUG-RS Complete syllabus</p></div><span class="download-btn"><i class="fas fa-download"></i></span></a>
+            <a href="documents/annual-report.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="100"><div class="doc-icon"><i class="fas fa-file-pdf"></i></div><div class="doc-info"><h4>Annual Report 2025</h4><p>Department annual activity report</p></div><span class="download-btn"><i class="fas fa-download"></i></span></a>
+            <a href="documents/teaching-plan.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="200"><div class="doc-icon"><i class="fas fa-file-alt"></i></div><div class="doc-info"><h4>Teaching Plan 2025-26</h4><p>Annual teaching schedule</p></div><span class="download-btn"><i class="fas fa-download"></i></span></a>
+            <a href="documents/inspection-file.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="300"><div class="doc-icon"><i class="fas fa-folder-open"></i></div><div class="doc-info"><h4>Inspection File</h4><p>Documents for regulatory inspection</p></div><span class="download-btn"><i class="fas fa-download"></i></span></a>
+            <a href="documents/museum-inventory.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="400"><div class="doc-icon"><i class="fas fa-clipboard-list"></i></div><div class="doc-info"><h4>Museum Inventory</h4><p>Specimens, models &amp; charts register</p></div><span class="download-btn"><i class="fas fa-download"></i></span></a>
+            <a href="documents/timetable.pdf" target="_blank" class="doc-card" data-aos="fade-up" data-aos-delay="500"><div class="doc-icon"><i class="fas fa-calendar-alt"></i></div><div class="doc-info"><h4>Time Table 2025-26</h4><p>Current academic year timetable</p></div><span class="download-btn"><i class="fas fa-download"></i></span></a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up"><h2>Contact Us</h2><div class="divider"></div></div>
+        <div class="contact-grid">
+            <div data-aos="fade-right">
+                <div class="contact-info-card"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Address</h4><p>Department of Rachana Sharir,<br>BBSPM's Dhanwantari Ayurved Medical College &amp; Hospital,<br>Degloor Road, Udgir - 413517,<br>Dist. Latur, Maharashtra, India</p></div></div>
+                <div class="contact-info-card"><div class="ci-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Phone</h4><p><a href="tel:+912385259825">(02385) 259825</a></p></div></div>
+                <div class="contact-info-card"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p><a href="mailto:contact@damchudgir.edu.in">contact@damchudgir.edu.in</a></p></div></div>
+                <div class="contact-info-card"><div class="ci-icon"><i class="fas fa-globe"></i></div><div><h4>College Website</h4><p><a href="https://www.damchudgir.edu.in" target="_blank">www.damchudgir.edu.in</a></p></div></div>
+                <div class="contact-info-card"><div class="ci-icon"><i class="fas fa-clock"></i></div><div><h4>Working Hours</h4><p>Monday - Saturday: 9:00 AM - 5:00 PM</p></div></div>
+                <div style="margin-top:20px;">
+                    <h4 style="font-family:'Poppins',sans-serif;color:var(--primary-dark);margin-bottom:15px;">Follow Us</h4>
                     <div class="footer-social">
-                        <!-- EDIT: Replace # with actual URLs -->
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/p/Department-of-Rachana-Sharir-DAMCH-Udgir-61578976656120/" target="_blank" style="background:#3b5998;color:white;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/damchudgir/" target="_blank" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white;"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>
-
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#facilities">Facilities</a></li>
-                        <li><a href="#faculty">Faculty</a></li>
-                        <li><a href="#activities">Activities</a></li>
-                        <li><a href="#documents">Documents</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="#documents">NCISM Syllabus</a></li>
-                        <li><a href="#documents">Inspection Files</a></li>
-                        <li><a href="#stats">Department Stats</a></li>
-                        <li><a href="#software">Digital Tools</a></li>
-                        <li><a href="#gallery">Photo Gallery</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4>Visitor Counter</h4>
-                    <div class="visitor-counter" id="visitorCounter">
-                        <div class="vc-number" id="visitorCount">0</div>
-                        <div class="vc-label">Total Visitors</div>
-                    </div>
-                    <p style="margin-top: 15px; font-size: 0.85rem;">
-                        <!-- FREE VISITOR COUNTER OPTIONS:
-                             Option 1: Use https://www.freevisitorcounters.com/
-                             Option 2: Use https://www.freecounterstat.com/
-                             Option 3: Use the JavaScript counter below (uses localStorage)
-                             Option 4: Use https://hits.seeyoufarm.com/ (badge-based)
-                        -->
-                    </p>
-                    <!-- OPTION: External Free Visitor Counter Badge -->
-                    <!-- Uncomment and replace with your counter code from freevisitorcounters.com -->
-                    <!--
-                    <a href="https://www.freevisitorcounters.com/en/home/stats/id/YOUR_ID_HERE/" target="_blank">
-                        <img src="https://www.freevisitorcounters.com/en/counter/render/YOUR_ID_HERE/t/7" border="0" class="counter-img" alt="visitor counter">
-                    </a>
-                    -->
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025-2026 Department of Rachana Sharir | BBSPM's Dhanwantari Ayurved Medical College, Udgir.
-                    All Rights Reserved.</p>
-                <p style="margin-top: 5px; font-size: 0.8rem; color: rgba(255,255,255,0.4);">
-                    Designed &amp; Developed for Academic Purpose
-                </p>
+            <div class="map-container" data-aos="fade-left">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.5!2d77.3946!3d18.3926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf83a2c22be5cf%3A0x7e87c0e85a37c21e!2sDhanwantari%20Ayurved%20Medical%20College%20%26%20Hospital!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- ===== BACK TO TOP BUTTON ===== -->
-    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>About Department</h4>
+                <p>Department of Rachana Sharir (Human Anatomy), BBSPM's Dhanwantari Ayurved Medical College &amp; Hospital, Udgir. Established in 2000. NCISM 2021 Pattern. Affiliated to MUHS, Nashik.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/p/Department-of-Rachana-Sharir-DAMCH-Udgir-61578976656120/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/damchudgir/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.damchudgir.edu.in" target="_blank"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#syllabus">NCISM Syllabus</a></li>
+                    <li><a href="#faculty">Faculty</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="#stats">Dept. Statistics</a></li>
+                    <li><a href="#software">Digital Tools</a></li>
+                    <li><a href="#gallery">Photo Gallery</a></li>
+                    <li><a href="https://www.damchudgir.edu.in" target="_blank">College Website</a></li>
+                    <li><a href="https://www.muhs.ac.in" target="_blank">MUHS Nashik</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Visitor Counter</h4>
+                <div class="visitor-counter"><div class="vc-number" id="visitorCount">0</div><div class="vc-label">Total Visitors</div></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025-2026 Department of Rachana Sharir | BBSPM's Dhanwantari Ayurved Medical College &amp; Hospital, Udgir. All Rights Reserved.</p>
+            <p style="margin-top:5px;font-size:.8rem;color:rgba(255,255,255,.4);">Designed for Academic &amp; Departmental Purpose</p>
+        </div>
+    </div>
+</footer>
 
-    <!-- ===== AOS Animation Library ===== -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
 
-    <script>
-        // ===== PRELOADER =====
-        window.addEventListener('load', function() {
-            const preloader = document.getElementById('preloader');
-            preloader.classList.add('fade-out');
-            setTimeout(() => preloader.style.display = 'none', 500);
-        });
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:800,easing:'ease-out',once:true,offset:50});
 
-        // ===== INITIALIZE AOS ANIMATIONS =====
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out',
-            once: true,
-            offset: 50
-        });
+var hamburger=document.getElementById('hamburger');var navLinks=document.getElementById('navLinks');
+hamburger.addEventListener('click',function(){navLinks.classList.toggle('active');});
+document.querySelectorAll('.nav-links a').forEach(function(link){link.addEventListener('click',function(){navLinks.classList.remove('active');});});
 
-        // ===== MOBILE MENU TOGGLE =====
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
+var sections=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',function(){var scrollY=window.pageYOffset;sections.forEach(function(section){var sH=section.offsetHeight;var sT=section.offsetTop-100;var sId=section.getAttribute('id');var link=document.querySelector('.nav-links a[href="#'+sId+'"]');if(link){if(scrollY>sT&&scrollY<=sT+sH){link.classList.add('active');}else{link.classList.remove('active');}}});});
 
-        hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
+var backToTopBtn=document.getElementById('backToTop');
+window.addEventListener('scroll',function(){if(window.pageYOffset>300){backToTopBtn.classList.add('visible');}else{backToTopBtn.classList.remove('visible');}});
 
-        // Close menu on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
+function animateCounters(){document.querySelectorAll('.stat-number,.hero-stat .number').forEach(function(counter){var target=parseInt(counter.textContent);if(isNaN(target)||counter.dataset.animated==='true')return;counter.dataset.animated='true';var current=0;var increment=target/60;var timer=setInterval(function(){current+=increment;if(current>=target){counter.textContent=target;clearInterval(timer);}else{counter.textContent=Math.floor(current);}},30);});}
+var statsObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting)animateCounters();});},{threshold:0.3});
+document.querySelectorAll('.stats-section,.hero').forEach(function(el){statsObserver.observe(el);});
 
-        // ===== ACTIVE NAV LINK ON SCROLL =====
-        const sections = document.querySelectorAll('section[id]');
-        window.addEventListener('scroll', function() {
-            const scrollY = window.pageYOffset;
+function openLightbox(el){var img=el.querySelector('img');var lb=document.getElementById('lightbox');document.getElementById('lightboxImg').src=img.src;lb.classList.add('active');}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
 
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-                const link = document.querySelector('.nav-links a[href="#' + sectionId + '"]');
+(function(){var count=localStorage.getItem('visitorCount');if(!count){count=1000;}else{count=parseInt(count);}if(!sessionStorage.getItem('counted')){count++;sessionStorage.setItem('counted','true');localStorage.setItem('visitorCount',count);}var el=document.getElementById('visitorCount');if(el)el.textContent=count.toLocaleString();})();
 
-                if (link) {
-                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
-                }
-            });
-        });
-
-        // ===== BACK TO TOP BUTTON =====
-        const backToTopBtn = document.getElementById('backToTop');
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        });
-
-        // ===== ANIMATED NUMBER COUNTER =====
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number, .hero-stat .number');
-            counters.forEach(counter => {
-                const target = parseInt(counter.textContent);
-                if (isNaN(target) || counter.dataset.animated === 'true') return;
-
-                counter.dataset.animated = 'true';
-                let current = 0;
-                const increment = target / 60;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        counter.textContent = target;
-                        clearInterval(timer);
-                    } else {
-                        counter.textContent = Math.floor(current);
-                    }
-                }, 30);
-            });
-        }
-
-        // Trigger counter animation when stats section is visible
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                }
-            });
-        }, { threshold: 0.3 });
-
-        document.querySelectorAll('.stats-section, .hero').forEach(el => {
-            statsObserver.observe(el);
-        });
-
-        // ===== LIGHTBOX FOR GALLERY =====
-        function openLightbox(element) {
-            const img = element.querySelector('img');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightboxImg');
-            lightboxImg.src = img.src;
-            lightbox.classList.add('active');
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-        }
-
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) closeLightbox();
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeLightbox();
-        });
-
-        // ===== SIMPLE VISITOR COUNTER (localStorage based) =====
-        // NOTE: This is a simple client-side counter. For accurate counting,
-        // use an external service like freevisitorcounters.com
-        (function() {
-            let count = localStorage.getItem('visitorCount');
-            if (!count) {
-                count = 1000; // Starting base number (you can change this)
-            } else {
-                count = parseInt(count);
-            }
-
-            // Increment only once per session
-            if (!sessionStorage.getItem('counted')) {
-                count++;
-                sessionStorage.setItem('counted', 'true');
-                localStorage.setItem('visitorCount', count);
-            }
-
-            const counterEl = document.getElementById('visitorCount');
-            if (counterEl) {
-                counterEl.textContent = count.toLocaleString();
-            }
-        })();
-
-        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
-
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor){anchor.addEventListener('click',function(e){e.preventDefault();var target=document.querySelector(this.getAttribute('href'));if(target)target.scrollIntoView({behavior:'smooth',block:'start'});});});
+</script>
 </body>
 </html>
