@@ -294,6 +294,7 @@
     <div class="loader"></div>
     <p>Loading...</p>
 </div>
+<noscript><style>#preloader{display:none !important;}</style></noscript>
 
 <!-- TOP BAR -->
 <div class="top-bar">
@@ -1044,12 +1045,16 @@
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    // Preloader
-    window.addEventListener('load', function() {
-        var p = document.getElementById('preloader');
-        p.classList.add('fade-out');
-        setTimeout(function(){ p.style.display='none'; }, 500);
-    });
+   // Preloader - with fallback timeout
+window.addEventListener('load', function() {
+    var p = document.getElementById('preloader');
+    if(p) { p.classList.add('fade-out'); setTimeout(function(){ p.style.display='none'; }, 500); }
+});
+// Fallback: Force hide preloader after 3 seconds even if page not fully loaded
+setTimeout(function() {
+    var p = document.getElementById('preloader');
+    if(p) { p.classList.add('fade-out'); setTimeout(function(){ p.style.display='none'; }, 500); }
+}, 3000);
 
     // AOS
     AOS.init({ duration: 800, easing: 'ease-out', once: true, offset: 50 });
