@@ -165,22 +165,79 @@
         .faculty-info .qualification { color: var(--gray); font-size: 0.85rem; margin-top: 5px; }
 
         /* Activities */
-        .activities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
-        .activity-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
-        .activity-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
-        .activity-card img { width: 100%; height: 220px; object-fit: cover; }
-        .activity-card .activity-content { padding: 25px; }
-        .activity-card .activity-date { display: inline-block; background: rgba(26,82,118,0.08); color: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 10px; }
-        .activity-card h3 { font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 10px; font-family: 'Poppins', sans-serif; }
-        .activity-card p { color: #666; font-size: 0.92rem; }
+    <div class="activities-grid">
+
+    <!-- Activity 1: Trustee Visit -->
+    <div class="activity-card" data-aos="fade-up">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOm7jwdVKnIm-oJ4AlBrQleYm0FRMZk7Xc_bE_Po_J29p1gyaUsEJDk=w600-h400-s-no-gm" alt="Trustee Babasaheb Patil Visit">
+        <div class="activity-content">
+            <span class="activity-date"><i class="far fa-calendar-alt"></i> 2025</span>
+            <h3>Trustee Hon. Babasaheb Patil Ji — Department Visit</h3>
+            <p>Honorable Trustee Babasaheb Patil Ji visited the Department of Rachana Sharir and appreciated the departmental infrastructure, museum collection, digital learning facilities, and academic activities.</p>
+        </div>
+    </div>
+
+    <!-- Activity 2: Rangoli Competition -->
+    <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOS4x_m3dLTUgHWXH8Q6ytrFj7hnBOdPNffQcKpsxOEWoJXAX8RQmQp=w600-h400-s-no-gm" alt="Anatomical Rangoli Competition">
+        <div class="activity-content">
+            <span class="activity-date"><i class="far fa-calendar-alt"></i> 2025</span>
+            <h3>Anatomical Rangoli Competition</h3>
+            <p>Honorable Pro-Chancellor Dr. Milind Nikumbh visited the Anatomical Rangoli Competition organized by the Department of Rachana Sharir. Students demonstrated their anatomical knowledge through creative rangoli art depicting human body structures.</p>
+        </div>
+    </div>
+
+    <!-- Activity 3: Organ Exhibition for School -->
+    <div class="activity-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczNQ_T_sopLgTBo1bDKnjbqFvlM8k3nRelWyICuNkc9RiE7xyC6eu1iX=w600-h400-s-no-gm" alt="Organ Exhibition for School Students">
+        <div class="activity-content">
+            <span class="activity-date"><i class="far fa-calendar-alt"></i> 2025</span>
+            <h3>Organ Exhibition — Poste Podar Learn School Visit</h3>
+            <p>Students from Poste Podar Learn School visited the department for an interactive Organ Exhibition. School students were shown anatomical specimens, models, and charts to inspire interest in human body sciences and Ayurveda.</p>
+        </div>
+    </div>
+
+    <!-- Activity 4: Yoga Day & Organ Donation Awareness -->
+    <div class="activity-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczNcHFslGuDjgWu-2q5DjqkIPnpBGtE0MQHvMv7wNd4j5nBjNoCUk3CU=w600-h400-s-no-gm" alt="International Yoga Day and Organ Donation Awareness">
+        <div class="activity-content">
+            <span class="activity-date"><i class="far fa-calendar-alt"></i> June &amp; August 2025</span>
+            <h3>International Yoga Day &amp; Organ Donation Day Awareness</h3>
+            <p>The department actively organized awareness programs on International Yoga Day (June 21) and Organ Donation Day (August 13). Activities included awareness rallies, short film screenings, street plays (Pathnatya), and pledge ceremonies promoting organ donation and healthy lifestyle.</p>
+        </div>
+    </div>
+
+</div>
 
         /* Gallery */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px; }
-        .gallery-item { position: relative; border-radius: var(--radius); overflow: hidden; cursor: pointer; aspect-ratio: 4/3; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .gallery-item:hover img { transform: scale(1.05); }
-        .gallery-item .overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: white; padding: 20px; transform: translateY(100%); transition: var(--transition); }
-        .gallery-item:hover .overlay { transform: translateY(0); }
+       <div class="gallery-grid">
+
+    <div class="gallery-item" data-aos="fade-up" onclick="openLightbox(this)">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOs1JvMUooyRu8438dTSiidzW9N4e-0dVGWRG-ZwCWTmOvTs4vOhlHYhA=w500-h375-s-no-gm" alt="Department of Rachana Sharir">
+        <div class="overlay"><p>Department of Rachana Sharir</p></div>
+    </div>
+
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="50" onclick="openLightbox(this)">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOm7jwdVKnIm-oJ4AlBrQleYm0FRMZk7Xc_bE_Po_J29p1gyaUsEJDk=w500-h375-s-no-gm" alt="Trustee Visit">
+        <div class="overlay"><p>Hon. Trustee Babasaheb Patil Ji — Department Visit</p></div>
+    </div>
+
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox(this)">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczOS4x_m3dLTUgHWXH8Q6ytrFj7hnBOdPNffQcKpsxOEWoJXAX8RQmQp=w500-h375-s-no-gm" alt="Anatomical Rangoli Competition">
+        <div class="overlay"><p>Anatomical Rangoli Competition — Visit by Pro-Chancellor Dr. Milind Nikumbh</p></div>
+    </div>
+
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="150" onclick="openLightbox(this)">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczNQ_T_sopLgTBo1bDKnjbqFvlM8k3nRelWyICuNkc9RiE7xyC6eu1iX=w500-h375-s-no-gm" alt="Organ Exhibition School Visit">
+        <div class="overlay"><p>Organ Exhibition — Poste Podar Learn School Visit</p></div>
+    </div>
+
+    <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox(this)">
+        <img src="https://photos.fife.usercontent.google.com/pw/AP1GczNcHFslGuDjgWu-2q5DjqkIPnpBGtE0MQHvMv7wNd4j5nBjNoCUk3CU=w500-h375-s-no-gm" alt="Yoga Day and Organ Donation Awareness">
+        <div class="overlay"><p>International Yoga Day &amp; Organ Donation Day Awareness</p></div>
+    </div>
+
+</div>
 
         /* Documents */
         .documents-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
