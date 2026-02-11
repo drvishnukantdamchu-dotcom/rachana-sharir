@@ -3,414 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Department of Rachana Sharir | DAMC Udgir</title>
-    <meta name="description" content="Department of Rachana Sharir (Human Anatomy), BBSPM's Dhanwantari Ayurved Medical College & Hospital, Udgir">
+    <title>Department of Rachana Sharir | Dhanwantari Ayurved Medical College, Udgir</title>
+    <meta name="description" content="Department of Rachana Sharir (Human Anatomy), BBSPM's Dhanwantari Ayurved Medical College & Hospital, Udgir. NCISM 2021 Pattern. Affiliated to MUHS, Nashik.">
+    <meta name="keywords" content="Rachana Sharir, DAMC Udgir, Dhanwantari Ayurved, BAMS, Anatomy, NCISM, MUHS Nashik">
+    <meta name="author" content="Dr. Jadhav V.R.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0a2647;
+            --primary-light: #144272;
+            --accent: #e8a317;
+            --accent-light: #f5c842;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --bg: #ffffff;
+            --bg-alt: #f7f9fc;
+            --bg-dark: #0a1628;
+            --card-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            --card-hover: 0 15px 40px rgba(0,0,0,0.15);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.7; background: var(--bg); }
+        h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
 
-        /* ===== NAVBAR ===== */
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+
+        /* NAVBAR */
         .navbar {
-            background: linear-gradient(135deg, #1a5276, #2980b9);
-            padding: 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(10, 38, 71, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
-        .nav-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 8px 20px;
-            background: rgba(0,0,0,0.15);
-            font-size: 0.8rem;
-            color: #ccc;
+        .nav-top-bar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 6px 30px;
+            background: rgba(0,0,0,0.3);
+            font-size: 0.75rem; color: rgba(255,255,255,0.7);
         }
-        .nav-top a { color: #eee; text-decoration: none; margin-left: 10px; }
-        .nav-main {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 5px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+        .nav-top-bar a { color: var(--accent); text-decoration: none; margin-left: 15px; transition: var(--transition); }
+        .nav-top-bar a:hover { color: white; }
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 8px 30px; max-width: 1300px; margin: 0 auto;
         }
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: white;
+        .nav-brand { display: flex; align-items: center; text-decoration: none; color: white; gap: 12px; }
+        .nav-logo {
+            width: 42px; height: 42px; background: var(--accent);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1rem; color: var(--primary);
+            font-family: 'Playfair Display', serif;
         }
-        .nav-brand-text { margin-left: 10px; }
-        .nav-brand-text h1 { font-size: 1rem; line-height: 1.2; }
-        .nav-brand-text p { font-size: 0.7rem; opacity: 0.85; }
-        .nav-links { display: flex; list-style: none; flex-wrap: wrap; }
-        .nav-links li a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 10px;
-            font-size: 0.85rem;
-            border-radius: 5px;
-            transition: background 0.3s;
+        .nav-brand-text h1 { font-size: 0.95rem; line-height: 1.2; font-family: 'Inter', sans-serif; font-weight: 600; }
+        .nav-brand-text p { font-size: 0.68rem; opacity: 0.7; font-family: 'Inter', sans-serif; }
+        .nav-links { display: flex; list-style: none; gap: 2px; }
+        .nav-links a {
+            color: rgba(255,255,255,0.85); text-decoration: none;
+            padding: 8px 14px; font-size: 0.82rem; border-radius: 8px;
+            transition: var(--transition); font-weight: 500;
         }
-        .nav-links li a:hover { background: rgba(255,255,255,0.15); }
-        .hamburger { display: none; cursor: pointer; font-size: 1.8rem; color: white; background: none; border: none; }
+        .nav-links a:hover { background: rgba(232,163,23,0.15); color: var(--accent); }
+        .hamburger { display: none; cursor: pointer; font-size: 1.6rem; color: white; background: none; border: none; padding: 5px; }
 
-        /* ===== HERO ===== */
+        /* HERO */
         .hero {
-            margin-top: 90px;
-            background: linear-gradient(135deg, #1a5276, #2c3e50, #1a5276);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
+            margin-top: 85px;
+            background: linear-gradient(135deg, var(--primary) 0%, #0d1b2a 50%, var(--primary-light) 100%);
+            color: white; padding: 70px 30px 60px; text-align: center;
+            position: relative; overflow: hidden;
         }
-        .hero h2 { font-size: 2.2rem; margin-bottom: 5px; }
-        .hero h3 { font-size: 1.2rem; font-weight: 300; opacity: 0.9; margin-bottom: 10px; }
-        .hero p { max-width: 700px; margin: 0 auto 20px; opacity: 0.85; font-size: 0.95rem; }
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 25px;
+        .hero::before {
+            content: ''; position: absolute; top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(232,163,23,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(20,66,114,0.15) 0%, transparent 40%);
+            animation: heroFloat 20s ease-in-out infinite;
         }
+        @keyframes heroFloat { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-2%,2%); } }
+        .hero-content { position: relative; z-index: 1; }
+        .hero-badge {
+            display: inline-block; background: rgba(232,163,23,0.15);
+            border: 1px solid rgba(232,163,23,0.3); color: var(--accent);
+            padding: 6px 20px; border-radius: 30px; font-size: 0.78rem;
+            font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px;
+        }
+        .hero h2 { font-size: 2.8rem; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .hero h3 { font-size: 1.2rem; font-weight: 300; opacity: 0.8; margin-bottom: 15px; }
+        .hero-college { font-size: 1rem; opacity: 0.7; max-width: 600px; margin: 0 auto 30px; line-height: 1.8; }
+        .hero-stats { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .hero-stat {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 10px;
-            padding: 15px 25px;
-            min-width: 120px;
+            background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius); padding: 18px 28px; min-width: 130px;
+            backdrop-filter: blur(5px); transition: var(--transition);
         }
-        .hero-stat .number { font-size: 2rem; font-weight: 700; color: #f39c12; }
-        .hero-stat .label { font-size: 0.8rem; opacity: 0.8; }
+        .hero-stat:hover { background: rgba(232,163,23,0.1); border-color: rgba(232,163,23,0.3); transform: translateY(-3px); }
+        .hero-stat .num { font-size: 2rem; font-weight: 800; color: var(--accent); font-family: 'Playfair Display', serif; }
+        .hero-stat .lbl { font-size: 0.75rem; opacity: 0.7; margin-top: 2px; }
 
-        /* ===== SECTIONS ===== */
-        .section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .section-alt { background: #f8f9fa; }
-        .section-title {
-            text-align: center;
-            font-size: 1.8rem;
-            color: #1a5276;
-            margin-bottom: 10px;
-            position: relative;
+        /* NOTICE TICKER */
+        .notice-bar {
+            background: linear-gradient(90deg, var(--accent), #d4960f);
+            padding: 8px 0; overflow: hidden; white-space: nowrap;
         }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #f39c12;
-            margin: 10px auto 0;
+        .notice-content {
+            display: inline-block; animation: ticker 30s linear infinite;
+            color: var(--primary); font-weight: 600; font-size: 0.85rem;
         }
-        .section-subtitle { text-align: center; color: #666; margin-bottom: 40px; font-size: 0.95rem; }
+        @keyframes ticker { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
+        .notice-content span { margin: 0 50px; }
 
-        /* ===== ABOUT ===== */
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .about-img { width: 100%; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
-        .about-text h3 { color: #1a5276; margin-bottom: 15px; font-size: 1.3rem; }
-        .about-text p { margin-bottom: 12px; color: #555; }
-        .badge-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
-        .badge {
-            background: #1a5276;
-            color: white;
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
+        /* SECTIONS */
+        .section { padding: 80px 30px; max-width: 1200px; margin: 0 auto; }
+        .section-dark { background: var(--bg-alt); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 {
+            font-size: 2rem; color: var(--primary); margin-bottom: 8px;
+            position: relative; display: inline-block;
+        }
+        .section-header h2::after {
+            content: ''; display: block; width: 50px; height: 3px;
+            background: var(--accent); margin: 12px auto 0; border-radius: 2px;
+        }
+        .section-header p { color: var(--text-light); font-size: 0.95rem; margin-top: 10px; }
+
+        /* ABOUT */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-img-wrapper { position: relative; }
+        .about-img {
+            width: 100%; border-radius: var(--radius);
+            box-shadow: var(--card-shadow); transition: var(--transition);
+        }
+        .about-img:hover { box-shadow: var(--card-hover); transform: scale(1.02); }
+        .about-img-badge {
+            position: absolute; bottom: -15px; right: -15px;
+            background: var(--accent); color: var(--primary);
+            padding: 12px 20px; border-radius: var(--radius);
+            font-weight: 700; font-size: 1.1rem; box-shadow: 0 5px 20px rgba(232,163,23,0.4);
+        }
+        .about-text h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 15px; }
+        .about-text p { color: var(--text-light); margin-bottom: 14px; font-size: 0.95rem; }
+        .about-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+        .about-badge {
+            background: var(--primary); color: white;
+            padding: 6px 16px; border-radius: 25px; font-size: 0.78rem; font-weight: 500;
         }
 
-        /* ===== VISION MISSION ===== */
+        /* VISION MISSION */
         .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .vm-card {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            border-top: 4px solid #1a5276;
+            background: white; border-radius: var(--radius); padding: 35px;
+            box-shadow: var(--card-shadow); border-top: 4px solid var(--primary);
+            transition: var(--transition);
         }
-        .vm-card h3 { color: #1a5276; margin-bottom: 15px; font-size: 1.2rem; }
-        .vm-card ul { padding-left: 20px; }
-        .vm-card li { margin-bottom: 8px; color: #555; }
+        .vm-card:hover { box-shadow: var(--card-hover); transform: translateY(-3px); }
+        .vm-card:nth-child(2) { border-top-color: var(--accent); }
+        .vm-card h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.2rem; }
+        .vm-card p { color: var(--text-light); }
+        .vm-card ul { padding-left: 18px; }
+        .vm-card li { color: var(--text-light); margin-bottom: 10px; font-size: 0.93rem; }
+        .vm-motto { margin-top: 18px; font-weight: 700; color: var(--accent); font-size: 1.05rem; font-style: italic; }
 
-        /* ===== FACILITIES ===== */
+        /* FACILITIES */
         .facilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
         .facility-card {
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-            border-bottom: 3px solid #f39c12;
+            background: white; border-radius: var(--radius); padding: 30px; text-align: center;
+            box-shadow: var(--card-shadow); transition: var(--transition);
+            border-bottom: 3px solid transparent; position: relative; overflow: hidden;
         }
-        .facility-card:hover { transform: translateY(-5px); }
-        .facility-icon { font-size: 2.5rem; margin-bottom: 10px; }
-        .facility-card h3 { color: #1a5276; margin-bottom: 10px; font-size: 1rem; }
-        .facility-card p { color: #666; font-size: 0.9rem; }
+        .facility-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0); transition: var(--transition); transform-origin: left;
+        }
+        .facility-card:hover { box-shadow: var(--card-hover); transform: translateY(-5px); }
+        .facility-card:hover::before { transform: scaleX(1); }
+        .facility-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .facility-card h3 { color: var(--primary); font-size: 1rem; margin-bottom: 10px; }
+        .facility-card p { color: var(--text-light); font-size: 0.88rem; }
+        .facility-highlight { color: var(--accent); font-weight: 700; margin-top: 8px; font-size: 0.9rem; }
 
-        /* ===== STATS ===== */
+        /* STATS */
         .stats-section {
-            background: linear-gradient(135deg, #1a5276, #2c3e50);
-            color: white;
-            padding: 50px 20px;
+            background: linear-gradient(135deg, var(--primary) 0%, #0d1b2a 100%);
+            color: white; padding: 70px 30px; position: relative;
+        }
+        .stats-section::before {
+            content: ''; position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 1000px;
-            margin: 30px auto 0;
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px;
+            max-width: 1100px; margin: 40px auto 0; position: relative; z-index: 1;
         }
         .stat-card {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.15);
+            text-align: center; padding: 25px 15px;
+            background: rgba(255,255,255,0.05); border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(5px); transition: var(--transition);
         }
-        .stat-card .stat-num { font-size: 2.2rem; font-weight: 700; color: #f39c12; }
-        .stat-card .stat-label { font-size: 0.85rem; opacity: 0.85; margin-top: 5px; }
+        .stat-card:hover { background: rgba(232,163,23,0.1); border-color: rgba(232,163,23,0.3); transform: translateY(-3px); }
+        .stat-num { font-size: 2.2rem; font-weight: 800; color: var(--accent); font-family: 'Playfair Display', serif; }
+        .stat-label { font-size: 0.8rem; opacity: 0.75; margin-top: 5px; }
 
-        /* ===== SYLLABUS ===== */
+        /* SYLLABUS */
         .syllabus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .syllabus-card {
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            background: white; border-radius: var(--radius); padding: 30px;
+            box-shadow: var(--card-shadow); transition: var(--transition);
         }
-        .syllabus-card h3 { color: #1a5276; margin-bottom: 15px; border-bottom: 2px solid #f39c12; padding-bottom: 8px; }
-        .syllabus-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 6px 0;
-            border-bottom: 1px solid #eee;
-            font-size: 0.9rem;
+        .syllabus-card:hover { box-shadow: var(--card-hover); }
+        .syllabus-card h3 {
+            color: var(--primary); margin-bottom: 18px;
+            padding-bottom: 10px; border-bottom: 2px solid var(--accent);
+            font-size: 1.1rem;
         }
-        .syllabus-item span:last-child { color: #1a5276; font-weight: 600; }
+        .syl-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.88rem;
+        }
+        .syl-item:last-child { border-bottom: none; }
+        .syl-item span:last-child { color: var(--primary); font-weight: 700; background: var(--bg-alt); padding: 2px 10px; border-radius: 12px; font-size: 0.8rem; }
 
-        /* ===== FACULTY ===== */
+        /* FACULTY */
         .faculty-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
         .faculty-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            text-align: center;
-            transition: transform 0.3s;
+            background: white; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--card-shadow); text-align: center; transition: var(--transition);
         }
-        .faculty-card:hover { transform: translateY(-5px); }
-        .faculty-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            background: #e8e8e8;
+        .faculty-card:hover { box-shadow: var(--card-hover); transform: translateY(-5px); }
+        .faculty-placeholder {
+            width: 100%; height: 220px; display: flex; align-items: center; justify-content: center;
+            font-size: 3.5rem; color: white;
         }
-        .faculty-info { padding: 15px; }
-        .faculty-info h3 { color: #1a5276; font-size: 1rem; }
-        .faculty-info .designation { color: #e67e22; font-size: 0.85rem; font-weight: 600; }
-        .faculty-info .qualification { color: #666; font-size: 0.8rem; }
+        .faculty-info { padding: 18px; }
+        .faculty-info h3 { color: var(--primary); font-size: 1rem; margin-bottom: 4px; }
+        .faculty-desg { color: var(--accent); font-size: 0.82rem; font-weight: 600; }
+        .faculty-qual { color: var(--text-light); font-size: 0.78rem; margin-top: 3px; }
 
-        /* ===== ACTIVITIES ===== */
+        /* ACTIVITIES */
         .activities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; }
         .activity-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+            background: white; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--card-shadow); transition: var(--transition);
         }
-        .activity-card:hover { transform: translateY(-5px); }
-        .activity-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background: #e8e8e8;
+        .activity-card:hover { box-shadow: var(--card-hover); transform: translateY(-5px); }
+        .activity-img { width: 100%; height: 260px; object-fit: cover; display: block; background: #e8e8e8; }
+        .activity-body { padding: 22px; }
+        .activity-tag {
+            display: inline-block; background: var(--primary); color: white;
+            padding: 3px 14px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; margin-bottom: 10px;
         }
-        .activity-content { padding: 20px; }
-        .activity-year {
-            display: inline-block;
-            background: #1a5276;
-            color: white;
-            padding: 3px 12px;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            margin-bottom: 8px;
-        }
-        .activity-content h3 { color: #1a5276; font-size: 1.05rem; margin-bottom: 8px; }
-        .activity-content p { color: #666; font-size: 0.9rem; }
+        .activity-body h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 8px; }
+        .activity-body p { color: var(--text-light); font-size: 0.9rem; }
 
-        /* ===== GALLERY ===== */
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        /* GALLERY */
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
         .gallery-item {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: transform 0.3s;
+            position: relative; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--card-shadow); cursor: pointer; transition: var(--transition);
+            aspect-ratio: 4/3;
         }
-        .gallery-item:hover { transform: scale(1.03); }
-        .gallery-item img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            background: #e8e8e8;
+        .gallery-item:hover { transform: scale(1.03); box-shadow: var(--card-hover); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .gallery-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(transparent 50%, rgba(10,38,71,0.85) 100%);
+            opacity: 0; transition: var(--transition);
         }
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-            padding: 30px 12px 10px;
-            font-size: 0.85rem;
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-label {
+            position: absolute; bottom: 12px; left: 12px; right: 12px;
+            color: white; font-size: 0.82rem; font-weight: 500;
+            transform: translateY(10px); opacity: 0; transition: var(--transition);
         }
+        .gallery-item:hover .gallery-label { transform: translateY(0); opacity: 1; }
 
-        /* ===== LIGHTBOX ===== */
+        /* LIGHTBOX */
         .lightbox {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.92); z-index: 2000;
+            justify-content: center; align-items: center;
         }
         .lightbox.active { display: flex; }
-        .lightbox img { max-width: 90%; max-height: 85vh; border-radius: 8px; }
-        .lightbox-close {
-            position: absolute;
-            top: 20px; right: 30px;
-            color: white;
-            font-size: 2.5rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-        .lightbox-caption {
-            position: absolute;
-            bottom: 30px;
-            color: white;
-            font-size: 1.1rem;
-            text-align: center;
-        }
+        .lightbox img { max-width: 90%; max-height: 85vh; border-radius: var(--radius); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+        .lb-close { position: absolute; top: 25px; right: 35px; color: white; font-size: 2.5rem; cursor: pointer; background: none; border: none; transition: var(--transition); }
+        .lb-close:hover { color: var(--accent); transform: rotate(90deg); }
+        .lb-caption { position: absolute; bottom: 30px; color: white; font-size: 1.1rem; text-align: center; font-weight: 500; }
 
-        /* ===== DOCUMENTS ===== */
+        /* DOCUMENTS */
         .docs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .doc-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
+            background: white; border-radius: var(--radius); padding: 25px;
+            text-align: center; box-shadow: var(--card-shadow); transition: var(--transition);
+            border: 1px solid #f0f0f0;
         }
-        .doc-card:hover { transform: translateY(-3px); }
-        .doc-icon { font-size: 2rem; margin-bottom: 8px; }
-        .doc-card h4 { color: #1a5276; font-size: 0.95rem; margin-bottom: 8px; }
-        .doc-link {
-            display: inline-block;
-            background: #1a5276;
-            color: white;
-            padding: 6px 18px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            transition: background 0.3s;
+        .doc-card:hover { box-shadow: var(--card-hover); transform: translateY(-3px); border-color: var(--accent); }
+        .doc-icon { font-size: 2.2rem; margin-bottom: 10px; }
+        .doc-card h4 { color: var(--primary); font-size: 0.9rem; margin-bottom: 12px; font-family: 'Inter', sans-serif; font-weight: 600; }
+        .doc-btn {
+            display: inline-block; background: var(--primary); color: white;
+            padding: 7px 22px; border-radius: 25px; text-decoration: none;
+            font-size: 0.78rem; font-weight: 500; transition: var(--transition);
         }
-        .doc-link:hover { background: #2980b9; }
+        .doc-btn:hover { background: var(--accent); color: var(--primary); }
 
-        /* ===== CONTACT ===== */
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .contact-info h3 { color: #1a5276; margin-bottom: 15px; }
-        .contact-item { display: flex; align-items: flex-start; margin-bottom: 15px; }
-        .contact-icon { font-size: 1.3rem; margin-right: 12px; color: #1a5276; min-width: 25px; }
-        .contact-item p { color: #555; font-size: 0.9rem; }
-        .contact-item a { color: #2980b9; text-decoration: none; }
-        .social-links { display: flex; gap: 12px; margin-top: 20px; }
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
-            border-radius: 25px;
-            text-decoration: none;
-            color: white;
-            font-size: 0.85rem;
-            transition: opacity 0.3s;
+        /* NOTICE BOARD */
+        .notice-board {
+            background: white; border-radius: var(--radius); padding: 30px;
+            box-shadow: var(--card-shadow); max-width: 800px; margin: 0 auto;
+            border-left: 4px solid var(--accent);
         }
-        .social-link:hover { opacity: 0.85; }
-        .social-fb { background: #1877f2; }
-        .social-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .social-web { background: #1a5276; }
+        .notice-board h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.1rem; }
+        .notice-item {
+            padding: 12px 0; border-bottom: 1px solid #f0f0f0;
+            display: flex; align-items: flex-start; gap: 12px;
+        }
+        .notice-item:last-child { border-bottom: none; }
+        .notice-date {
+            background: var(--primary); color: white; padding: 4px 10px;
+            border-radius: 6px; font-size: 0.7rem; font-weight: 600; white-space: nowrap;
+        }
+        .notice-text { color: var(--text-light); font-size: 0.9rem; }
+        .notice-text a { color: var(--primary); font-weight: 600; text-decoration: none; }
+        .notice-text a:hover { color: var(--accent); }
 
-        /* ===== FOOTER ===== */
+        /* CONTACT */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .contact-info h3 { color: var(--primary); margin-bottom: 20px; font-size: 1.2rem; }
+        .contact-row { display: flex; align-items: flex-start; margin-bottom: 18px; gap: 14px; }
+        .contact-icon { font-size: 1.2rem; color: var(--accent); min-width: 24px; padding-top: 2px; }
+        .contact-row p { color: var(--text-light); font-size: 0.9rem; }
+        .contact-row a { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .contact-row a:hover { color: var(--accent); }
+        .socials { display: flex; gap: 10px; margin-top: 25px; flex-wrap: wrap; }
+        .social-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 10px 20px; border-radius: 30px; text-decoration: none;
+            color: white; font-size: 0.82rem; font-weight: 500; transition: var(--transition);
+        }
+        .social-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .s-fb { background: #1877f2; }
+        .s-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .s-web { background: var(--primary); }
+        .s-email { background: #34495e; }
+
+        /* VISITOR COUNTER */
+        .visitor-section { text-align: center; padding: 30px; background: var(--bg-alt); }
+        .visitor-counter {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: white; padding: 10px 25px; border-radius: 30px;
+            box-shadow: var(--card-shadow); font-size: 0.9rem; color: var(--text-light);
+        }
+        .visitor-num { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
+
+        /* FOOTER */
         .footer {
-            background: #1a252f;
-            color: #aaa;
-            text-align: center;
-            padding: 25px 20px;
-            font-size: 0.85rem;
+            background: var(--bg-dark); color: rgba(255,255,255,0.5);
+            text-align: center; padding: 35px 30px; font-size: 0.82rem;
         }
-        .footer a { color: #f39c12; text-decoration: none; }
+        .footer a { color: var(--accent); text-decoration: none; }
+        .footer-designer { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08); }
 
-        /* ===== BACK TO TOP ===== */
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #1a5276;
-            color: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: none;
-            font-size: 1.3rem;
-            cursor: pointer;
-            display: none;
-            z-index: 999;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-            transition: background 0.3s;
+        /* BACK TO TOP */
+        .btt {
+            position: fixed; bottom: 30px; right: 30px;
+            background: var(--primary); color: white;
+            width: 48px; height: 48px; border-radius: 50%; border: none;
+            font-size: 1.4rem; cursor: pointer; display: none; z-index: 999;
+            box-shadow: 0 5px 20px rgba(10,38,71,0.4); transition: var(--transition);
         }
-        .back-to-top:hover { background: #2980b9; }
+        .btt:hover { background: var(--accent); color: var(--primary); transform: translateY(-3px); }
 
-        /* ===== RESPONSIVE ===== */
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .facilities-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(3, 1fr); }
+            .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 768px) {
-            .nav-links { display: none; flex-direction: column; width: 100%; background: #1a5276; position: absolute; top: 100%; left: 0; padding: 10px 0; }
+            .nav-links { display: none; flex-direction: column; width: 100%; background: var(--primary); position: absolute; top: 100%; left: 0; padding: 15px; gap: 5px; border-top: 1px solid rgba(255,255,255,0.1); }
             .nav-links.active { display: flex; }
             .hamburger { display: block; }
-            .hero h2 { font-size: 1.5rem; }
-            .hero-stats { gap: 15px; }
+            .hero h2 { font-size: 1.8rem; }
+            .hero { padding: 50px 20px 40px; }
             .about-grid, .vm-grid, .syllabus-grid, .contact-grid { grid-template-columns: 1fr; }
-            .facilities-grid, .docs-grid, .gallery-grid { grid-template-columns: 1fr 1fr; }
-            .faculty-grid { grid-template-columns: 1fr 1fr; }
             .activities-grid { grid-template-columns: 1fr; }
+            .docs-grid { grid-template-columns: 1fr 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .section { padding: 50px 20px; }
         }
         @media (max-width: 480px) {
-            .facilities-grid, .docs-grid, .gallery-grid, .faculty-grid, .stats-grid { grid-template-columns: 1fr; }
+            .facilities-grid, .docs-grid, .gallery-grid, .faculty-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .hero-stats { gap: 10px; }
+            .hero-stat { padding: 12px 18px; min-width: 100px; }
         }
     </style>
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
+<!-- NAVBAR -->
 <nav class="navbar">
-    <div class="nav-top">
-        <span>NCISM 2021 Pattern | Affiliated to MUHS, Nashik | Est. 2000</span>
+    <div class="nav-top-bar">
+        <span>NCISM 2021 Pattern &bull; Affiliated to MUHS, Nashik &bull; Est. 2000</span>
         <span>
             <a href="https://www.damchudgir.edu.in" target="_blank">College Website</a>
             <a href="tel:02385259825">&#9742; (02385) 259825</a>
+            <a href="mailto:deptofrachanadamchu@gmail.com">&#9993; Email</a>
         </span>
     </div>
-    <div class="nav-main">
-        <a href="#" class="nav-brand">
+    <div class="nav-container">
+        <a href="#home" class="nav-brand">
+            <div class="nav-logo">RS</div>
             <div class="nav-brand-text">
                 <h1>Dept. of Rachana Sharir</h1>
                 <p>BBSPM's DAMC&H, Udgir</p>
@@ -425,59 +436,81 @@
             <li><a href="#faculty">Faculty</a></li>
             <li><a href="#activities">Activities</a></li>
             <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#notices">Notices</a></li>
             <li><a href="#documents">Documents</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero" id="home">
-    <h2>Department of Rachana Sharir</h2>
-    <h3>(Human Anatomy)</h3>
-    <p>Bal Bhagwan Shikshan Prasarak Mandal's<br>
-    <strong>Dhanwantari Ayurved Medical College & Hospital, Udgir</strong><br>
-    Dist. Latur, Maharashtra</p>
-    <div class="hero-stats">
-        <div class="hero-stat"><div class="number">100</div><div class="label">Intake (2025-26)</div></div>
-        <div class="hero-stat"><div class="number">500</div><div class="label">Teaching Hours</div></div>
-        <div class="hero-stat"><div class="number">204</div><div class="label">Specimens</div></div>
-        <div class="hero-stat"><div class="number">237</div><div class="label">Models</div></div>
+    <div class="hero-content">
+        <div class="hero-badge">&#9733; NCISM 2021 &bull; AyUG-RS &bull; I Professional BAMS</div>
+        <h2>Department of Rachana Sharir</h2>
+        <h3>(Human Anatomy)</h3>
+        <p class="hero-college">Bal Bhagwan Shikshan Prasarak Mandal's<br>
+        <strong>Dhanwantari Ayurved Medical College &amp; Hospital, Udgir</strong><br>
+        Degloor Road, Udgir - 413517, Dist. Latur, Maharashtra</p>
+        <div class="hero-stats">
+            <div class="hero-stat"><div class="num">100</div><div class="lbl">Intake 2025-26</div></div>
+            <div class="hero-stat"><div class="num">500</div><div class="lbl">Teaching Hours</div></div>
+            <div class="hero-stat"><div class="num">204</div><div class="lbl">Specimens</div></div>
+            <div class="hero-stat"><div class="num">237</div><div class="lbl">Models</div></div>
+        </div>
     </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
+<!-- NOTICE TICKER -->
+<div class="notice-bar">
+    <div class="notice-content">
+        <span>&#128227; Intake increased to 100 students from Academic Year 2025-26</span>
+        <span>&#128227; Complete Anatomy (Elsevier) Software — Annual Subscription Active</span>
+        <span>&#128227; NCISM 2021 Syllabus Pattern Implemented</span>
+        <span>&#128227; Organ Donation Awareness Programs — Ongoing</span>
+        <span>&#128227; Department Email: deptofrachanadamchu@gmail.com</span>
+    </div>
+</div>
+
+<!-- ABOUT -->
 <section class="section" id="about">
-    <h2 class="section-title">About the Department</h2>
-    <p class="section-subtitle">Bridging Classical Ayurvedic Anatomy with Modern Anatomical Sciences</p>
+    <div class="section-header">
+        <h2>About the Department</h2>
+        <p>Bridging Classical Ayurvedic Anatomy with Modern Anatomical Sciences</p>
+    </div>
     <div class="about-grid">
+        <div class="about-img-wrapper">
+            <img src="images/department-image.jpg" alt="Department of Rachana Sharir, DAMC Udgir" class="about-img">
+            <div class="about-img-badge">25+ Years</div>
+        </div>
         <div class="about-text">
             <h3>Established Since 2000</h3>
-            <p>The Department of Rachana Sharir (Human Anatomy) at BBSPM's Dhanwantari Ayurved Medical College & Hospital, Udgir, is one of the fundamental pre-clinical departments established since the inception of the college in the year 2000.</p>
+            <p>The Department of Rachana Sharir (Human Anatomy) at BBSPM's Dhanwantari Ayurved Medical College &amp; Hospital, Udgir, is one of the fundamental pre-clinical departments established since the inception of the college in the year 2000.</p>
             <p>Our department follows the NCISM 2021 syllabus pattern (Subject Code: AyUG-RS) with a total of 500 teaching hours comprising 180 Lecture Hours and 320 Non-Lecture Hours. The college is affiliated to MUHS, Nashik and approved by NCISM, New Delhi.</p>
             <p>From the academic year 2025-26, the intake capacity has been increased from 60 to 100 students. The department is equipped with a modern Dissection Hall, a rich Museum, digital learning tools, and the premium Complete Anatomy (Elsevier) software worth &#8377;4,00,000 annual subscription.</p>
-            <div class="badge-row">
-                <span class="badge">NCISM 2021</span>
-                <span class="badge">MUHS Nashik</span>
-                <span class="badge">25+ Years</span>
-                <span class="badge">100 Intake</span>
+            <p>The college campus sprawls over 7 acres with a digital library of 10,000+ books and a verdant herbal garden with 260+ species and 850+ plants.</p>
+            <div class="about-badges">
+                <span class="about-badge">NCISM 2021</span>
+                <span class="about-badge">MUHS Nashik</span>
+                <span class="about-badge">25+ Years</span>
+                <span class="about-badge">100 Intake</span>
+                <span class="about-badge">7 Acre Campus</span>
             </div>
-        </div>
-        <div>
-            <img src="images/department-image.jpg" alt="Department of Rachana Sharir, DAMC Udgir" class="about-img">
         </div>
     </div>
 </section>
 
-<!-- ===== VISION & MISSION ===== -->
-<section class="section section-alt">
-    <h2 class="section-title">Vision & Mission</h2>
-    <p class="section-subtitle">Guiding principles of our department</p>
+<!-- VISION MISSION -->
+<section class="section section-dark">
+    <div class="section-header">
+        <h2>Vision &amp; Mission</h2>
+        <p>Guiding principles of our department</p>
+    </div>
     <div class="vm-grid">
         <div class="vm-card">
             <h3>&#127919; Our Vision</h3>
             <p>To establish the department as a Centre of Excellence in Ayurvedic anatomical education, research, and training. To provide health service and training in the field of Ashtang Ayurveda, keeping pace with modern medicine and techniques.</p>
-            <p style="margin-top:15px; font-weight:600; color:#e67e22;">"EFFORT IS GOD!!!"</p>
+            <p class="vm-motto">"EFFORT IS GOD!!!"</p>
         </div>
         <div class="vm-card">
             <h3>&#127793; Our Mission</h3>
@@ -492,10 +525,12 @@
     </div>
 </section>
 
-<!-- ===== FACILITIES ===== -->
+<!-- FACILITIES -->
 <section class="section" id="facilities">
-    <h2 class="section-title">Department Facilities</h2>
-    <p class="section-subtitle">State-of-the-art infrastructure for comprehensive anatomical education</p>
+    <div class="section-header">
+        <h2>Department Facilities</h2>
+        <p>State-of-the-art infrastructure for comprehensive anatomical education</p>
+    </div>
     <div class="facilities-grid">
         <div class="facility-card">
             <div class="facility-icon">&#129516;</div>
@@ -510,11 +545,12 @@
         <div class="facility-card">
             <div class="facility-icon">&#128187;</div>
             <h3>Complete Anatomy (Elsevier)</h3>
-            <p>Premium 3D anatomy software <strong>&#8377;4,00,000 annual subscription</strong> for interactive digital dissection.</p>
+            <p>Premium 3D anatomy software for interactive digital dissection and learning.</p>
+            <p class="facility-highlight">&#8377;4,00,000/Year</p>
         </div>
         <div class="facility-card">
             <div class="facility-icon">&#128253;</div>
-            <h3>Projector & AV Room</h3>
+            <h3>Projector &amp; AV Room</h3>
             <p>Dedicated room with projector for presentations, 3D animated videos, and multimedia teaching.</p>
         </div>
         <div class="facility-card">
@@ -530,76 +566,84 @@
     </div>
 </section>
 
-<!-- ===== DEPARTMENT STATS ===== -->
+<!-- STATS -->
 <section class="stats-section">
-    <h2 class="section-title" style="color:white;">Department at a Glance</h2>
-    <p class="section-subtitle" style="color:#ccc;">Academic Year 2025-26</p>
+    <div class="section-header">
+        <h2 style="color:white;">Department at a Glance</h2>
+        <p style="color:rgba(255,255,255,0.6);">Key Statistics &mdash; Academic Year 2025-26</p>
+    </div>
     <div class="stats-grid">
         <div class="stat-card"><div class="stat-num">204</div><div class="stat-label">Specimens</div></div>
         <div class="stat-card"><div class="stat-num">237</div><div class="stat-label">Models</div></div>
         <div class="stat-card"><div class="stat-num">151</div><div class="stat-label">Charts</div></div>
         <div class="stat-card"><div class="stat-num">81</div><div class="stat-label">Library Books</div></div>
+        <div class="stat-card"><div class="stat-num">127</div><div class="stat-label">Dissection Instruments</div></div>
+        <div class="stat-card"><div class="stat-num">366</div><div class="stat-label">Equipments</div></div>
         <div class="stat-card"><div class="stat-num">222</div><div class="stat-label">PPT Presentations</div></div>
         <div class="stat-card"><div class="stat-num">100</div><div class="stat-label">Teaching Slides</div></div>
         <div class="stat-card"><div class="stat-num">100</div><div class="stat-label">Intake 2025-26</div></div>
-        <div class="stat-card"><div class="stat-num">--</div><div class="stat-label">Dissection Instruments</div></div>
+        <div class="stat-card"><div class="stat-num">500</div><div class="stat-label">Teaching Hours</div></div>
     </div>
 </section>
 
-<!-- ===== SYLLABUS ===== -->
+<!-- SYLLABUS -->
 <section class="section" id="syllabus">
-    <h2 class="section-title">NCISM 2021 Syllabus</h2>
-    <p class="section-subtitle">Subject Code: AyUG-RS | I Professional BAMS | Total: 500 Hours | Marks: 400</p>
+    <div class="section-header">
+        <h2>NCISM 2021 Syllabus</h2>
+        <p>Subject Code: AyUG-RS | I Professional BAMS | Total: 500 Hours | Marks: 400</p>
+    </div>
     <div class="syllabus-grid">
         <div class="syllabus-card">
-            <h3>Paper I</h3>
-            <div class="syllabus-item"><span>Shariropkramaniya Shaarira</span><span>6 M</span></div>
-            <div class="syllabus-item"><span>Paribhasha Shaarira</span><span>4 M</span></div>
-            <div class="syllabus-item"><span>Garbha Shaarira</span><span>15 M</span></div>
-            <div class="syllabus-item"><span>Asthi Shaarira</span><span>4 M</span></div>
-            <div class="syllabus-item"><span>Sandhi Shaarira</span><span>4 M</span></div>
-            <div class="syllabus-item"><span>Snayu Sharir</span><span>3 M</span></div>
-            <div class="syllabus-item"><span>Peshi Shaarira</span><span>3 M</span></div>
-            <div class="syllabus-item"><span>Kesha, Danta, Nakha</span><span>4 M</span></div>
-            <div class="syllabus-item"><span>Embryology</span><span>5 M</span></div>
-            <div class="syllabus-item"><span>Osteology</span><span>12 M</span></div>
-            <div class="syllabus-item"><span>Arthrology</span><span>10 M</span></div>
-            <div class="syllabus-item"><span>Myology</span><span>4 M</span></div>
-            <div class="syllabus-item"><span>Nervous System</span><span>14 M</span></div>
-            <div class="syllabus-item"><span>Endocrinology</span><span>8 M</span></div>
-            <div class="syllabus-item"><span>Lymphatic System</span><span>4 M</span></div>
+            <h3>Paper I (100 Marks)</h3>
+            <div class="syl-item"><span>Shariropkramaniya Shaarira</span><span>6 M</span></div>
+            <div class="syl-item"><span>Paribhasha Shaarira</span><span>4 M</span></div>
+            <div class="syl-item"><span>Garbha Shaarira</span><span>15 M</span></div>
+            <div class="syl-item"><span>Asthi Shaarira</span><span>4 M</span></div>
+            <div class="syl-item"><span>Sandhi Shaarira</span><span>4 M</span></div>
+            <div class="syl-item"><span>Snayu Sharir</span><span>3 M</span></div>
+            <div class="syl-item"><span>Peshi Shaarira</span><span>3 M</span></div>
+            <div class="syl-item"><span>Kesha, Danta, Nakha</span><span>4 M</span></div>
+            <div class="syl-item"><span>Embryology</span><span>5 M</span></div>
+            <div class="syl-item"><span>Osteology</span><span>12 M</span></div>
+            <div class="syl-item"><span>Arthrology</span><span>10 M</span></div>
+            <div class="syl-item"><span>Myology</span><span>4 M</span></div>
+            <div class="syl-item"><span>Nervous System</span><span>14 M</span></div>
+            <div class="syl-item"><span>Endocrinology</span><span>8 M</span></div>
+            <div class="syl-item"><span>Lymphatic System</span><span>4 M</span></div>
         </div>
         <div class="syllabus-card">
-            <h3>Paper II</h3>
-            <div class="syllabus-item"><span>Pramana Sharira</span><span>2 M</span></div>
-            <div class="syllabus-item"><span>Koshtha Evam Ashaya</span><span>4 M</span></div>
-            <div class="syllabus-item"><span>Sira Sharir</span><span>4 M</span></div>
-            <div class="syllabus-item"><span>Dhamani Sharir</span><span>2 M</span></div>
-            <div class="syllabus-item"><span>Strotas Shaarira</span><span>7 M</span></div>
-            <div class="syllabus-item"><span>Kala Shaarira</span><span>4 M</span></div>
-            <div class="syllabus-item"><span>Indriya Shaarira</span><span>3 M</span></div>
-            <div class="syllabus-item"><span>Twacha Sharir</span><span>3 M</span></div>
-            <div class="syllabus-item"><span>Marma Sharira</span><span>15 M</span></div>
-            <div class="syllabus-item"><span>Respiratory System</span><span>10 M</span></div>
-            <div class="syllabus-item"><span>Digestive System</span><span>12 M</span></div>
-            <div class="syllabus-item"><span>Cardiovascular System</span><span>8 M</span></div>
-            <div class="syllabus-item"><span>Urinary System</span><span>10 M</span></div>
-            <div class="syllabus-item"><span>Reproductive System</span><span>6 M</span></div>
-            <div class="syllabus-item"><span>Sensory Organs</span><span>10 M</span></div>
+            <h3>Paper II (100 Marks)</h3>
+            <div class="syl-item"><span>Pramana Sharira</span><span>2 M</span></div>
+            <div class="syl-item"><span>Koshtha Evam Ashaya</span><span>4 M</span></div>
+            <div class="syl-item"><span>Sira Sharir</span><span>4 M</span></div>
+            <div class="syl-item"><span>Dhamani Sharir</span><span>2 M</span></div>
+            <div class="syl-item"><span>Strotas Shaarira</span><span>7 M</span></div>
+            <div class="syl-item"><span>Kala Shaarira</span><span>4 M</span></div>
+            <div class="syl-item"><span>Indriya Shaarira</span><span>3 M</span></div>
+            <div class="syl-item"><span>Twacha Sharir</span><span>3 M</span></div>
+            <div class="syl-item"><span>Marma Sharira</span><span>15 M</span></div>
+            <div class="syl-item"><span>Respiratory System</span><span>10 M</span></div>
+            <div class="syl-item"><span>Digestive System</span><span>12 M</span></div>
+            <div class="syl-item"><span>Cardiovascular System</span><span>8 M</span></div>
+            <div class="syl-item"><span>Urinary System</span><span>10 M</span></div>
+            <div class="syl-item"><span>Reproductive System</span><span>6 M</span></div>
+            <div class="syl-item"><span>Sensory Organs</span><span>10 M</span></div>
         </div>
     </div>
 </section>
 
-<!-- ===== DIGITAL TOOLS ===== -->
-<section class="section section-alt">
-    <h2 class="section-title">Digital Anatomy Tools</h2>
-    <p class="section-subtitle">Enhancing learning with technology</p>
+<!-- DIGITAL TOOLS -->
+<section class="section section-dark">
+    <div class="section-header">
+        <h2>Digital Anatomy Tools</h2>
+        <p>Enhancing learning with cutting-edge technology</p>
+    </div>
     <div class="facilities-grid">
         <div class="facility-card">
             <div class="facility-icon">&#128187;</div>
             <h3>Complete Anatomy (Elsevier)</h3>
             <p>Premium 3D anatomy platform with dissection layers and clinical correlations.</p>
-            <p style="color:#e67e22; font-weight:700; margin-top:8px;">&#8377;4,00,000/Year</p>
+            <p class="facility-highlight">&#8377;4,00,000/Year</p>
         </div>
         <div class="facility-card">
             <div class="facility-icon">&#129504;</div>
@@ -624,226 +668,414 @@
     </div>
 </section>
 
-<!-- ===== FACULTY ===== -->
+<!-- FACULTY -->
 <section class="section" id="faculty">
-    <h2 class="section-title">Our Faculty</h2>
-    <p class="section-subtitle">Dedicated team of Department of Rachana Sharir</p>
+    <div class="section-header">
+        <h2>Our Faculty</h2>
+        <p>Dedicated team of the Department of Rachana Sharir</p>
+    </div>
     <div class="faculty-grid">
         <div class="faculty-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#1a5276,#2980b9);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">&#9792;</div>
+            <div class="faculty-placeholder" style="background:linear-gradient(135deg,#1a5276,#2980b9);">&#9792;</div>
             <div class="faculty-info">
                 <h3>Dr. Mayuri Thakur</h3>
-                <p class="designation">Reader (Associate Professor)</p>
-                <p class="qualification">M.D. (Rachana Sharir)</p>
+                <p class="faculty-desg">Reader (Associate Professor)</p>
+                <p class="faculty-qual">M.D. (Rachana Sharir)</p>
             </div>
         </div>
         <div class="faculty-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#2c3e50,#34495e);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">&#9794;</div>
+            <div class="faculty-placeholder" style="background:linear-gradient(135deg,#0a2647,#144272);">&#9794;</div>
             <div class="faculty-info">
                 <h3>Dr. Vishnukant Jadhav</h3>
-                <p class="designation">Assistant Professor</p>
-                <p class="qualification">M.D. (Rachana Sharir)</p>
+                <p class="faculty-desg">Assistant Professor</p>
+                <p class="faculty-qual">M.D. (Rachana Sharir)</p>
             </div>
         </div>
         <div class="faculty-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#8e44ad,#9b59b6);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">&#9792;</div>
+            <div class="faculty-placeholder" style="background:linear-gradient(135deg,#6c3483,#8e44ad);">&#9792;</div>
             <div class="faculty-info">
                 <h3>Dr. Rubina Pathan</h3>
-                <p class="designation">Assistant Professor</p>
-                <p class="qualification">M.D. (Rachana Sharir)</p>
+                <p class="faculty-desg">Assistant Professor</p>
+                <p class="faculty-qual">M.D. (Rachana Sharir)</p>
             </div>
         </div>
         <div class="faculty-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#e67e22,#f39c12);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">&#9792;</div>
+            <div class="faculty-placeholder" style="background:linear-gradient(135deg,#b7950b,#d4ac0d);">&#9792;</div>
             <div class="faculty-info">
                 <h3>Dr. Pratibha Patil</h3>
-                <p class="designation">Assistant Professor</p>
-                <p class="qualification">M.D. (Rachana Sharir)</p>
+                <p class="faculty-desg">Assistant Professor</p>
+                <p class="faculty-qual">M.D. (Rachana Sharir)</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== ACTIVITIES ===== -->
-<section class="section section-alt" id="activities">
-    <h2 class="section-title">Department Activities</h2>
-    <p class="section-subtitle">Awareness programs, exhibitions, competitions, and community outreach</p>
+<!-- ACTIVITIES -->
+<section class="section section-dark" id="activities">
+    <div class="section-header">
+        <h2>Department Activities</h2>
+        <p>Awareness programs, exhibitions, competitions, and community outreach</p>
+    </div>
     <div class="activities-grid">
         <div class="activity-card">
             <img src="images/trustee-visit.jpg.jpg" alt="Trustee Visit" class="activity-img">
-            <div class="activity-content">
-                <span class="activity-year">2025</span>
-                <h3>Trustee Hon. Babasaheb Patil Ji — Department Visit</h3>
+            <div class="activity-body">
+                <span class="activity-tag">VIP Visit</span>
+                <h3>Trustee Hon. Babasaheb Patil Ji &mdash; Department Visit</h3>
                 <p>Honorable Trustee Babasaheb Patil Ji visited the Department of Rachana Sharir and appreciated the departmental infrastructure, museum collection, and academic activities.</p>
             </div>
         </div>
         <div class="activity-card">
             <img src="images/rangoli-competition.jpg.jpg" alt="Anatomical Rangoli Competition" class="activity-img">
-            <div class="activity-content">
-                <span class="activity-year">2025</span>
+            <div class="activity-body">
+                <span class="activity-tag">Competition</span>
                 <h3>Anatomical Rangoli Competition</h3>
                 <p>Honorable Pro-Chancellor Dr. Milind Nikumbh visited the Anatomical Rangoli Competition organized by the department. Students demonstrated anatomical knowledge through creative rangoli art.</p>
             </div>
         </div>
         <div class="activity-card">
             <img src="images/school-exhibition.jpg.jpg" alt="School Exhibition" class="activity-img">
-            <div class="activity-content">
-                <span class="activity-year">2025</span>
-                <h3>Organ Exhibition — Poste Podar Learn School</h3>
+            <div class="activity-body">
+                <span class="activity-tag">Outreach</span>
+                <h3>Organ Exhibition &mdash; Poste Podar Learn School</h3>
                 <p>Students from Poste Podar Learn School visited the department for an interactive Organ Exhibition with anatomical specimens, models, and charts.</p>
             </div>
         </div>
         <div class="activity-card">
-            <img src="images/museum-dept.jpg.JPG" alt="Museum Department" class="activity-img">
-            <div class="activity-content">
-                <span class="activity-year">2025</span>
-                <h3>Anatomy Museum — Department Showcase</h3>
-                <p>The Anatomy Museum showcases 204 specimens, 237 models, and 151 charts covering all systems of the human body for teaching and demonstration purposes.</p>
+            <img src="images/Suvarnaprashan-camp.jpg.jpg" alt="Suvarnaprashan Camp" class="activity-img">
+            <div class="activity-body">
+                <span class="activity-tag">Health Camp</span>
+                <h3>Suvarnaprashan Camp</h3>
+                <p>Suvarnaprashan immunization camp organized for children's health and immunity development as per Ayurvedic practice.</p>
+            </div>
+        </div>
+        <div class="activity-card">
+            <img src="images/10thayurvedaday-celebration.jpg.jpg" alt="Ayurveda Day Celebration" class="activity-img">
+            <div class="activity-body">
+                <span class="activity-tag">Celebration</span>
+                <h3>10th Ayurveda Day Celebration</h3>
+                <p>Grand celebration of the 10th National Ayurveda Day with academic activities, cultural programs, and awareness initiatives.</p>
+            </div>
+        </div>
+        <div class="activity-card">
+            <img src="images/organ-exhibition-2.jpg.jpg" alt="Organ Exhibition" class="activity-img">
+            <div class="activity-body">
+                <span class="activity-tag">Exhibition</span>
+                <h3>Organ Exhibition &amp; Donation Awareness</h3>
+                <p>Organ exhibition and donation awareness program featuring anatomical specimens, models, charts, and informational sessions for students and public.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== GALLERY ===== -->
+<!-- GALLERY -->
 <section class="section" id="gallery">
-    <h2 class="section-title">Photo Gallery</h2>
-    <p class="section-subtitle">Glimpses of our department, infrastructure, and events</p>
+    <div class="section-header">
+        <h2>Photo Gallery</h2>
+        <p>Glimpses of our department, infrastructure, and events</p>
+    </div>
     <div class="gallery-grid">
-        <div class="gallery-item" onclick="openLightbox('images/department-image.jpg','Department of Rachana Sharir')">
+        <div class="gallery-item" onclick="openLB('images/department-image.jpg','Department of Rachana Sharir')">
             <img src="images/department-image.jpg" alt="Department">
-            <div class="gallery-caption">Department of Rachana Sharir</div>
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Department of Rachana Sharir</div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('images/museum-dept.jpg.JPG','Anatomy Museum')">
-            <img src="images/museum-dept.jpg.JPG" alt="Museum">
-            <div class="gallery-caption">Anatomy Museum</div>
+        <div class="gallery-item" onclick="openLB('images/Museum.jpg.jpg','Anatomy Museum')">
+            <img src="images/Museum.jpg.jpg" alt="Museum">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Anatomy Museum</div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('images/trustee-visit.jpg.jpg','Hon. Trustee Babasaheb Patil Ji Visit')">
+        <div class="gallery-item" onclick="openLB('images/museum-dept.jpg.JPG','Museum Collection')">
+            <img src="images/museum-dept.jpg.JPG" alt="Museum Collection">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Museum Collection</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/departmental-projector-software.jpg.jpg','Digital Lab &amp; Projector')">
+            <img src="images/departmental-projector-software.jpg.jpg" alt="Digital Lab">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Digital Lab &amp; Projector</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/trustee-visit.jpg.jpg','Trustee Visit')">
             <img src="images/trustee-visit.jpg.jpg" alt="Trustee Visit">
-            <div class="gallery-caption">Hon. Trustee Babasaheb Patil Ji Visit</div>
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Hon. Trustee Visit</div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('images/rangoli-competition.jpg.jpg','Anatomical Rangoli Competition')">
-            <img src="images/rangoli-competition.jpg.jpg" alt="Rangoli Competition">
-            <div class="gallery-caption">Anatomical Rangoli Competition</div>
+        <div class="gallery-item" onclick="openLB('images/rangoli-competition.jpg.jpg','Anatomical Rangoli')">
+            <img src="images/rangoli-competition.jpg.jpg" alt="Rangoli">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Anatomical Rangoli Competition</div>
         </div>
-        <div class="gallery-item" onclick="openLightbox('images/school-exhibition.jpg.jpg','Organ Exhibition — School Visit')">
+        <div class="gallery-item" onclick="openLB('images/school-exhibition.jpg.jpg','School Exhibition')">
             <img src="images/school-exhibition.jpg.jpg" alt="School Exhibition">
-            <div class="gallery-caption">Organ Exhibition — School Visit</div>
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">School Exhibition Visit</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/Practical-tutorial.jpg.jpg','Practical Tutorial')">
+            <img src="images/Practical-tutorial.jpg.jpg" alt="Practical">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Practical Tutorial</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/Departmentalseminar.jpg.jpg','Departmental Seminar')">
+            <img src="images/Departmentalseminar.jpg.jpg" alt="Seminar">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Departmental Seminar</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/Guest-lecture.jpg.JPG','Guest Lecture')">
+            <img src="images/Guest-lecture.jpg.JPG" alt="Guest Lecture">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Guest Lecture</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/Guest-lecture2.jpg.jpg','Guest Lecture')">
+            <img src="images/Guest-lecture2.jpg.jpg" alt="Guest Lecture 2">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Guest Lecture</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/10thayurvedaday-celebration.jpg.jpg','Ayurveda Day')">
+            <img src="images/10thayurvedaday-celebration.jpg.jpg" alt="Ayurveda Day">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Ayurveda Day Celebration</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/10thayurvedaday-ekitdistribution.jpg.jpg','E-Kit Distribution')">
+            <img src="images/10thayurvedaday-ekitdistribution.jpg.jpg" alt="E-Kit Distribution">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">E-Kit Distribution</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/Suvarnaprashan-camp.jpg.jpg','Suvarnaprashan Camp')">
+            <img src="images/Suvarnaprashan-camp.jpg.jpg" alt="Suvarnaprashan">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Suvarnaprashan Camp</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/organ-exhibition-2.jpg.jpg','Organ Exhibition')">
+            <img src="images/organ-exhibition-2.jpg.jpg" alt="Organ Exhibition">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Organ Exhibition</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/field-visit1.jpg.JPG','Field Visit')">
+            <img src="images/field-visit1.jpg.JPG" alt="Field Visit">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Field Visit</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/field-visit2.jpg.JPG','Field Visit')">
+            <img src="images/field-visit2.jpg.JPG" alt="Field Visit 2">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Field Visit</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/field-visit3.jpg.JPG','Field Visit')">
+            <img src="images/field-visit3.jpg.JPG" alt="Field Visit 3">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Field Visit</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/field-visit-3.jpg.JPG','Field Visit')">
+            <img src="images/field-visit-3.jpg.JPG" alt="Field Visit 4">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Field Visit</div>
+        </div>
+        <div class="gallery-item" onclick="openLB('images/20230712_113300AMByGPSMapCamera.jpg','Campus View')">
+            <img src="images/20230712_113300AMByGPSMapCamera.jpg" alt="Campus">
+            <div class="gallery-overlay"></div>
+            <div class="gallery-label">Campus View</div>
         </div>
     </div>
 </section>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <img id="lightbox-img" src="" alt="">
-    <div class="lightbox-caption" id="lightbox-caption"></div>
+<div class="lightbox" id="lightbox" onclick="closeLB()">
+    <button class="lb-close" onclick="closeLB()">&times;</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lb-caption" id="lb-cap"></div>
 </div>
 
-<!-- ===== DOCUMENTS ===== -->
-<section class="section section-alt" id="documents">
-    <h2 class="section-title">Documents & Files</h2>
-    <p class="section-subtitle">Download department documents, syllabus, and reports</p>
+<!-- NOTICES -->
+<section class="section section-dark" id="notices">
+    <div class="section-header">
+        <h2>Notice Board</h2>
+        <p>Latest announcements and updates</p>
+    </div>
+    <div class="notice-board">
+        <h3>&#128204; Department Notices</h3>
+        <div class="notice-item">
+            <span class="notice-date">Feb 2026</span>
+            <div class="notice-text">Intake increased to <strong>100 students</strong> from Academic Year 2025-26 as per NCISM approval.</div>
+        </div>
+        <div class="notice-item">
+            <span class="notice-date">Jan 2026</span>
+            <div class="notice-text">Complete Anatomy (Elsevier) software subscription renewed for 2025-26. Annual cost: &#8377;4,00,000.</div>
+        </div>
+        <div class="notice-item">
+            <span class="notice-date">2025-26</span>
+            <div class="notice-text">NCISM 2021 syllabus pattern fully implemented. Subject Code: AyUG-RS. Total 500 teaching hours.</div>
+        </div>
+        <div class="notice-item">
+            <span class="notice-date">Ongoing</span>
+            <div class="notice-text">Organ Donation Awareness — rallies, short films, street plays, and pledge ceremonies throughout the year.</div>
+        </div>
+        <div class="notice-item">
+            <span class="notice-date">Notice</span>
+            <div class="notice-text">For department queries contact: <a href="mailto:deptofrachanadamchu@gmail.com">deptofrachanadamchu@gmail.com</a></div>
+        </div>
+        <!-- ADD NEW NOTICES HERE: Copy the block below, edit date & text, paste above this comment
+        <div class="notice-item">
+            <span class="notice-date">DATE</span>
+            <div class="notice-text">Your notice text here.</div>
+        </div>
+        -->
+    </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section class="section" id="documents">
+    <div class="section-header">
+        <h2>Documents &amp; Files</h2>
+        <p>Download department documents, syllabus, and regulatory frameworks</p>
+    </div>
     <div class="docs-grid">
         <div class="doc-card">
-            <div class="doc-icon">&#128196;</div>
-            <h4>NCISM 2021 Syllabus</h4>
-            <a href="documents/ncism-syllabus.pdf" target="_blank" class="doc-link">Download PDF</a>
-        </div>
-        <div class="doc-card">
-            <div class="doc-icon">&#128202;</div>
-            <h4>Annual Report 2025</h4>
-            <a href="documents/annual-report.pdf" target="_blank" class="doc-link">Download PDF</a>
-        </div>
-        <div class="doc-card">
-            <div class="doc-icon">&#128221;</div>
-            <h4>Teaching Plan 2025-26</h4>
-            <a href="documents/teaching-plan.pdf" target="_blank" class="doc-link">Download PDF</a>
-        </div>
-        <div class="doc-card">
-            <div class="doc-icon">&#128203;</div>
-            <h4>Inspection File</h4>
-            <a href="documents/inspection-file.pdf" target="_blank" class="doc-link">Download PDF</a>
-        </div>
-        <div class="doc-card">
-            <div class="doc-icon">&#127963;</div>
-            <h4>Museum Inventory</h4>
-            <a href="documents/museum-inventory.pdf" target="_blank" class="doc-link">Download PDF</a>
+            <div class="doc-icon">&#128220;</div>
+            <h4>NCISM Syllabus Rachana Sharir (AyUG RS-1)</h4>
+            <a href="documents/AyUG%20RS-1syllabus.pdf.pdf" target="_blank" class="doc-btn">Download PDF</a>
         </div>
         <div class="doc-card">
             <div class="doc-icon">&#128197;</div>
-            <h4>Time Table 2025-26</h4>
-            <a href="documents/timetable.pdf" target="_blank" class="doc-link">Download PDF</a>
+            <h4>Academic Calendar UG Program</h4>
+            <a href="documents/ACADEMIC%20CALENDAR%20UG%20PROGRAM.pdf" target="_blank" class="doc-btn">Download PDF</a>
+        </div>
+        <div class="doc-card">
+            <div class="doc-icon">&#128197;</div>
+            <h4>Academic Calendar BAMS 2024-25</h4>
+            <a href="documents/Academic%20Calendar%20for%20batch%202024-25%20of%20BAMS%20(3)%20(1)%20(3).pdf" target="_blank" class="doc-btn">Download PDF</a>
+        </div>
+        <div class="doc-card">
+            <div class="doc-icon">&#128203;</div>
+            <h4>NCISM Assessment &amp; Rating Framework 2025-26</h4>
+            <a href="documents/Framewor-for-Assessment-and-Rating-of-Ayurveda-Colleges-for-the-A.Y.%202025-26%20(2).pdf" target="_blank" class="doc-btn">Download PDF</a>
+        </div>
+        <div class="doc-card">
+            <div class="doc-icon">&#128214;</div>
+            <h4>Minimum Essential Standards &amp; Rating Regulations 2024</h4>
+            <a href="documents/Minimum%20Essential%20Standards,%20Assessment%20and%20Rating%20for%20Undergraduate%20Ayurveda%20Colleges%20and%20Attached%20Teaching%20Hospitals%20Regulations,%202024.pdf" target="_blank" class="doc-btn">Download PDF</a>
+        </div>
+        <div class="doc-card">
+            <div class="doc-icon">&#128196;</div>
+            <h4>User Manual AyUG-1</h4>
+            <a href="documents/usermanualAyuUG1.pdf.pdf" target="_blank" class="doc-btn">Download PDF</a>
         </div>
     </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section class="section" id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <p class="section-subtitle">Get in touch with the Department of Rachana Sharir</p>
+<!-- CONTACT -->
+<section class="section section-dark" id="contact">
+    <div class="section-header">
+        <h2>Contact Us</h2>
+        <p>Get in touch with the Department of Rachana Sharir</p>
+    </div>
     <div class="contact-grid">
         <div class="contact-info">
             <h3>Department of Rachana Sharir</h3>
-            <div class="contact-item">
+            <div class="contact-row">
                 <span class="contact-icon">&#127963;</span>
-                <p>BBSPM's Dhanwantari Ayurved Medical College & Hospital,<br>Degloor Road, Udgir - 413517,<br>Dist. Latur, Maharashtra, India</p>
+                <p>BBSPM's Dhanwantari Ayurved Medical College &amp; Hospital,<br>Degloor Road, Shivneri, Udgir - 413517,<br>Dist. Latur, Maharashtra, India</p>
             </div>
-            <div class="contact-item">
+            <div class="contact-row">
                 <span class="contact-icon">&#9742;</span>
                 <p><a href="tel:02385259825">(02385) 259825</a></p>
             </div>
-            <div class="contact-item">
+            <div class="contact-row">
                 <span class="contact-icon">&#9993;</span>
-                <p><a href="mailto:contact@damchudgir.edu.in">contact@damchudgir.edu.in</a></p>
+                <p>Department: <a href="mailto:deptofrachanadamchu@gmail.com">deptofrachanadamchu@gmail.com</a><br>
+                College: <a href="mailto:contact@damchudgir.edu.in">contact@damchudgir.edu.in</a></p>
             </div>
-            <div class="contact-item">
+            <div class="contact-row">
                 <span class="contact-icon">&#127760;</span>
                 <p><a href="https://www.damchudgir.edu.in" target="_blank">www.damchudgir.edu.in</a></p>
             </div>
-            <div class="social-links">
-                <a href="https://www.facebook.com/p/Department-of-Rachana-Sharir-DAMCH-Udgir-61578976656120/" target="_blank" class="social-link social-fb">&#128246; Facebook</a>
-                <a href="https://www.instagram.com/damchudgir/" target="_blank" class="social-link social-ig">&#128247; Instagram</a>
-                <a href="https://www.damchudgir.edu.in" target="_blank" class="social-link social-web">&#127760; Website</a>
+            <div class="socials">
+                <a href="https://www.facebook.com/p/Department-of-Rachana-Sharir-DAMCH-Udgir-61578976656120/" target="_blank" class="social-btn s-fb">&#128246; Dept. Facebook</a>
+                <a href="https://www.instagram.com/damchudgir/" target="_blank" class="social-btn s-ig">&#128247; Instagram</a>
+                <a href="https://www.damchudgir.edu.in" target="_blank" class="social-btn s-web">&#127760; College Site</a>
+                <a href="mailto:deptofrachanadamchu@gmail.com" class="social-btn s-email">&#9993; Dept. Email</a>
             </div>
         </div>
         <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.5!2d77.39!3d18.39!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf83!2sDhanwantari%20Ayurved%20Medical%20College!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="350" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3787.0!2d77.1331185!3d18.3980381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcfaa4238d6bcb7%3A0xbdaf4738b275eb2!2sDhanwantari%20Ayurved%20Medical%20College%20and%20Hospital!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="380" style="border:0;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- VISITOR COUNTER -->
+<div class="visitor-section">
+    <div class="visitor-counter">
+        &#128065; Total Visitors: <span class="visitor-num" id="visitorCount">0</span>
+    </div>
+</div>
+
+<!-- FOOTER -->
 <footer class="footer">
-    <p>&copy; 2025 Department of Rachana Sharir | BBSPM's Dhanwantari Ayurved Medical College & Hospital, Udgir</p>
-    <p style="margin-top:5px;">Affiliated to <a href="#">MUHS, Nashik</a> | Approved by <a href="#">NCISM, New Delhi</a></p>
+    <p>&copy; 2025-26 Department of Rachana Sharir | BBSPM's Dhanwantari Ayurved Medical College &amp; Hospital, Udgir</p>
+    <p>Affiliated to <a href="#">MUHS, Nashik</a> &bull; Approved by <a href="#">NCISM, New Delhi</a> &bull; Email: <a href="mailto:deptofrachanadamchu@gmail.com">deptofrachanadamchu@gmail.com</a></p>
+    <p class="footer-designer">Designed &amp; Developed by <strong>Dr. Jadhav V.R.</strong> | Department of Rachana Sharir, DAMC Udgir</p>
 </footer>
 
 <!-- BACK TO TOP -->
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
 
 <script>
 // Back to Top
-window.addEventListener('scroll', function() {
-    var btn = document.getElementById('backToTop');
-    if (window.scrollY > 400) { btn.style.display = 'block'; } else { btn.style.display = 'none'; }
+window.addEventListener('scroll',function(){
+    document.getElementById('btt').style.display=window.scrollY>500?'block':'none';
 });
 
 // Lightbox
-function openLightbox(src, caption) {
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox-caption').textContent = caption;
+function openLB(s,c){
+    document.getElementById('lb-img').src=s;
+    document.getElementById('lb-cap').textContent=c;
     document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow='hidden';
 }
-function closeLightbox() {
+function closeLB(){
     document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow='';
 }
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
 
-// Close nav on link click (mobile)
-document.querySelectorAll('.nav-links a').forEach(function(link) {
-    link.addEventListener('click', function() {
-        document.querySelector('.nav-links').classList.remove('active');
-    });
+// Mobile Nav Close
+document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click',function(){document.querySelector('.nav-links').classList.remove('active');});
 });
+
+// Visitor Counter (localStorage based)
+(function(){
+    var k='rs_damc_visitors';
+    var c=parseInt(localStorage.getItem(k))||1247;
+    if(!sessionStorage.getItem('rs_counted')){
+        c++;
+        sessionStorage.setItem('rs_counted','1');
+        localStorage.setItem(k,c);
+    }
+    document.getElementById('visitorCount').textContent=c.toLocaleString();
+})();
+
+// Animate stats on scroll
+var observed=false;
+var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting&&!observed){
+            observed=true;
+            document.querySelectorAll('.stat-num').forEach(function(el){
+                var target=parseInt(el.textContent);
+                if(isNaN(target))return;
+                var current=0;
+                var step=Math.ceil(target/40);
+                var timer=setInterval(function(){
+                    current+=step;
+                    if(current>=target){current=target;clearInterval(timer);}
+                    el.textContent=current;
+                },30);
+            });
+        }
+    });
+},{threshold:0.3});
+var statsEl=document.querySelector('.stats-section');
+if(statsEl)observer.observe(statsEl);
 </script>
 
 </body>
